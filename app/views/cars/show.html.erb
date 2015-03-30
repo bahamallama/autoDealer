@@ -58,11 +58,9 @@
 </table>
 </div>
 
-<br />
-
- <%= image_tag @car.image(:large), class: "img-rounded" %>
-
-<br />
+<div class="Car-Image">
+ 	<%= image_tag @car.image(:large), class: "img-rounded" %>
+</div>
 
 <%= link_to 'Edit', edit_car_path(@car), class: "btn btn-link" %> |
 <%= link_to 'Back', cars_path, class: "btn btn-link" %>
