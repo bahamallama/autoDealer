@@ -1,0 +1,97 @@
+<%= form_for(@car, html: { class: "form-horizontal"}, :html => { :multipart => true }) do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% @car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :make, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :make, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :model, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :model, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :year, class: "col-sm-2 control-label"%>
+		<div class="col-sm-10">
+    <%= f.number_field :year, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :price, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :price, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :carType, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :carType, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :transmission, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :transmission, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :interior, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :interior, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :miles, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.number_field :miles, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :drive, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :drive, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :exterior, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :exterior, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :vin, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_field :vin, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.text_area :description, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+    <%= f.file_field :image, class: "form-control" %>
+		</div>
+  </div>
+  <div class="form-group">
+     <div class="col-sm-offset-2 col-sm-10">
+    	 <%= f.submit class: "btn btn-primary" %>
+	 </div>
+  </div>
+<% end %>

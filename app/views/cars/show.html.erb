@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+ <%= @car.year %> 
+ <%= @car.make.capitalize %> 
+ <%= @car.model.capitalize %>
+</h2>
+
+<div class="car-details">
+<table border="0" width="400px">
+	<tr>
+		<td width="50%">
+  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Price:</strong>
+ 		 	<%= number_to_currency(@car.price) %><br />
+		</td>
+		<td width="50%">
+			 <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Miles:</strong> 
+			  <%= @car.miles %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Type:</strong>
+  			<%= @car.carType %><br />
+		</td>
+		<td>
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Drive:</strong> 
+			<%= @car.drive %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Transmission:</strong>
+ 		 	<%= @car.transmission %><br />
+		</td>
+		<td>
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Exterior:</strong> 
+			<%= @car.exterior %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Interior:</strong>
+  			<%= @car.interior %><br />
+		</td>
+		<td>
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>EPA Mileage:</strong>
+	</tr>
+	<tr>
+		<td>
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Stock #:</strong>
+		</td>
+		<td>
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>VIN:</strong> 
+			<%= @car.vin %>
+		</td>
+	</tr>
+</table>
+</div>
+
+<br />
+
+ <%= image_tag @car.image(:large), class: "img-rounded" %>
+
+<br />
+
+<%= link_to 'Edit', edit_car_path(@car), class: "btn btn-link" %> |
+<%= link_to 'Back', cars_path, class: "btn btn-link" %>
