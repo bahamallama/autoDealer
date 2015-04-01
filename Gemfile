@@ -26,10 +26,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Paperclick for adding images
 gem "paperclip", "~> 4.2"
-
+gem "paperclip-dropbox", ">= 1.1.7"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+# Use Figaro for putting information that you want parsed at runtime but not commit to a public git repository like passwords, etc.
+gem "figaro"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
