@@ -1,7 +1,7 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
   #remove skip_before_filter :verify_authenticity_token after setting devise?
-  skip_before_filter :verify_authenticity_token
+  #skip_before_filter :verify_authenticity_token
 
   # GET /cars
   # GET /cars.json
