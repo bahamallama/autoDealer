@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  # Required for Devise remember to change local host and port to web server and port, ie. jsauto.com and port 80
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

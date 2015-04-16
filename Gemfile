@@ -34,6 +34,9 @@ gem "figaro"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# use for user validations and admin validations
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
