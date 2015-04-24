@@ -9,4 +9,7 @@ class Car < ActiveRecord::Base
                               :path => ":style/:id_:filename"
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   end
+  
+  validates :make, :model, :year, presence: true
+  
 end
