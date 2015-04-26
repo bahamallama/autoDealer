@@ -13,7 +13,7 @@
 		</td>
 		<td width="50%">
 			 <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Miles:</strong> 
-			  <%= @car.miles %>
+			  <%= number_with_delimiter(@car.miles, :delimiter => ',') %>
 		</td>
 	</tr>
 	<tr>
