@@ -11,5 +11,6 @@ class Car < ActiveRecord::Base
   end
   
   validates :make, :model, :year, presence: true
+  validates_length_of :vin, :minimum => 17, :maximum => 17
   
 end
