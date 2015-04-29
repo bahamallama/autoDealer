@@ -1,5 +1,7 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new , :create, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
   #remove skip_before_filter :verify_authenticity_token after setting devise?
   #skip_before_filter :verify_authenticity_token
 
@@ -73,5 +75,11 @@ class CarsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
       params.require(:car).permit(:make, :description, :model, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :vin, :image )
+    end
+    
+    def check_user
+      if current_user != @car.user
+        redirect_to root_url, alert: "Sorry this car belongs to someone else"
+      end
     end
 end

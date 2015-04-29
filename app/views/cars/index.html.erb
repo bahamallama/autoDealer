@@ -2,7 +2,7 @@
 	<% @cars.each do |car| %>
   		<div class="col-md-3">
 		    <div class="thumbnail">
-		        	<%= image_tag car.image.url(:medium)%>
+				<%= link_to image_tag(car.image.url(:medium)), car %>
 		         <div class="caption">
 		           <h3>
 					   <%= car.make %>
@@ -16,3 +16,7 @@
 		</div>
 	<% end %>
 </div>
+
+<% if user_signed_in? %>
+	<%= link_to "New Car", new_car_path, class: "btn btn-link" %>
+<% end %>
