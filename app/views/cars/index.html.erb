@@ -17,6 +17,10 @@
 	<% end %>
 </div>
 
-<% if user_signed_in? %>
-	<%= link_to "New Car", new_car_path, class: "btn btn-link" %>
+<% if can? :create, Car %>
+	<%= link_to "New Car", new_car_path, class: "btn btn-link" %> 
+<% end %>
+
+<% if can? :manage, :all %>
+	| <%= link_to "Admin", users_path, class:"btn btn-link" %>
 <% end %>

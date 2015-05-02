@@ -36,7 +36,8 @@ gem "figaro"
 
 # use for user validations and admin validations
 gem 'devise'
-
+# user for role management with devise
+gem 'cancancan', '~> 1.10'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

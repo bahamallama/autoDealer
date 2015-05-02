@@ -1,7 +1,9 @@
 class CarsController < ApplicationController
-  before_action :set_car, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new , :create, :edit, :update, :destroy]
-  before_action :check_user, only: [:edit, :update, :destroy]
+  #before_action :set_car, only: [:show, :edit, :update, :destroy]
+  #before_action :authenticate_user!, only: [:new , :create, :edit, :update, :destroy]
+  #before_action :check_user, only: [:edit, :update, :destroy]
+  load_and_authorize_resource
+  
   #remove skip_before_filter :verify_authenticity_token after setting devise?
   #skip_before_filter :verify_authenticity_token
 
@@ -18,7 +20,7 @@ class CarsController < ApplicationController
 
   # GET /cars/new
   def new
-    @car = Car.new
+  #  @car = Car.new
   end
 
   # GET /cars/1/edit
@@ -28,7 +30,7 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
-    @car = Car.new(car_params)
+   # @car = Car.new(car_params)
     @car.user_id = current_user.id
 
     respond_to do |format|
@@ -68,9 +70,9 @@ class CarsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_car
-      @car = Car.find(params[:id])
-    end
+   # def set_car
+    #  @car = Car.find(params[:id])
+   # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
