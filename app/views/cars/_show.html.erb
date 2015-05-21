@@ -2,7 +2,9 @@
 	<% if image.car_id != nil && image.car_id == @car.id %>
 		<div class="img-thumbnail">
 			<%= image_tag image.extrapic.url(:thumb), alt: image.extrapic.url(:thumb) %><br />
-			<%= link_to 'Destroy', image,  method: :delete, data: { confirm: 'Are you sure you want to delete this picture?' }, class: "btn btn-link" %>
+			<% if can? :destroy, @car %>
+				<%= link_to 'Destroy', image,  method: :delete, data: { confirm: 'Are you sure you want to delete this picture?' }, class: "btn btn-link" %>
+			<% end %>
 		</div>
 	<% end %>
 <% end %>
