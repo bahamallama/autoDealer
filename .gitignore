@@ -21,3 +21,7 @@
 
 # Ignore files uploaded on localhost
 /public/system
+
+# Ignore db copy which is a restore of the db folder in case I need to revert while adding a feature
+
+/db copy

@@ -1,3 +1,4 @@
+<center>
 <h2>
  <%= @car.year %> 
  <%= @car.make.capitalize %> 
@@ -68,3 +69,22 @@
 	<%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure you want to delete this car?' }, class: "btn btn-link" %> |
 <% end %>
 <%= link_to 'Back', cars_path, class: "btn btn-link" %>
+
+<% if can? :update, @car %>
+	<h2>Add Additional Images</h2>
+	<%= form_for(Image.new, html: { multipart: true, class: "dropzone"}) do |f|  %>
+		<%= f.hidden_field :car_id, :value => @car.id %>
+  	  	<div class="fallback">
+    	  <%= f.file_field :extrapic %><br>
+    	  <%= f.submit "Upload Car Images" %>
+  		</div>
+		<% end %>
+<% end %>
+
+<div class="images">
+  <%= render partial: 'show' %>
+</div>
+
+
+
+</center>

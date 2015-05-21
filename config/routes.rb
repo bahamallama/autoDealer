@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :cars
 
   resources :roles
+  
+  resources :images
 
   get 'pages/about'
 

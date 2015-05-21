@@ -1,0 +1,35 @@
+<div class="Car-Image">
+ 	<%= image_tag @image.extrapic(:large), class: "img-rounded" %>
+</div>
+
+<table class="table table-striped table-bordered">
+	<tr>
+		<td><strong>File Name:</strong></td>
+		<td><%= @image.extrapic_file_name %></td>
+	</tr>
+	<tr>
+		<td><strong>Content Type:</strong></td>
+		<td><%= @image.extrapic_content_type %></td>
+	</tr>
+	<tr>
+		<td><strong>File Size:</strong></td>
+		<td><%= @extrapic_file_size %></td>
+	</tr>
+	<tr>
+		<td><strong>Created At:</strong></td>
+		<td><%= @created_at %></td>
+	</tr>
+	<tr>
+		<td><strong>Updated At:</strong></td>
+		<td><%= @updated_at %></td>
+	</tr>
+	<tr>
+	  <td><strong>Care ID:</strong></td>
+	  <td><%= @image.car_id %></td>
+	</tr>
+</table>
+
+
+<br />
+<%= link_to 'Edit', edit_image_path(@image), class: "btn btn-link" %> | <%= link_to 'Destroy', @image, method: :delete, data: { confirm: 'Are you sure you want to delete this image?' }, class: "btn btn-link"%> | 
+<%= link_to 'Back', images_path, class: "btn btn-link" %>

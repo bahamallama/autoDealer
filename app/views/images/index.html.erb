@@ -1,0 +1,19 @@
+<h2>Listing Images</h2>
+
+<table>
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+		 <td><%= image_tag image.extrapic.url(:thumb), class: "img-rounded" %></td>
+       	<td> <%= link_to 'Show', image %> | 
+        <%= link_to 'Edit', edit_image_path(image) %> | 
+        <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-link" %></td>
+		<td><%= image.car_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image', new_image_path %>

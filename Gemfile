@@ -18,6 +18,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Use jquery-turbolinks to get turborlinks to work with AJAX
+gem 'jquery-turbolinks'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,13 +29,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Paperclick for adding images
 gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
+# gem gon for accessing rails variables in javascript, used in car gallery uploaded
+gem 'gon'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Figaro for putting information that you want parsed at runtime but not commit to a public git repository like passwords, etc.
 gem "figaro"
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+# use dropzonejs-rails for multi-image uploads
+gem 'dropzonejs-rails'
 # use for user validations and admin validations
 gem 'devise'
 # user for role management with devise

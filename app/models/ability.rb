@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     if user == nil
-      can :read, :all
+      can :read, Car
     elsif user.admin?
         can :manage, :all
       elsif user.seller?
@@ -15,6 +15,8 @@ class Ability
         can :destroy, Car do |car|
           car.try(:user) == user
         end
+        #needed to add additional images to cars by car creator
+        can :create, Image
       elsif user.regular?
         can :read, Car
     end

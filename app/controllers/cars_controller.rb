@@ -3,7 +3,7 @@ class CarsController < ApplicationController
   #before_action :authenticate_user!, only: [:new , :create, :edit, :update, :destroy]
   #before_action :check_user, only: [:edit, :update, :destroy]
   load_and_authorize_resource
-  
+  before_filter :load_images, only: [:show]
   #remove skip_before_filter :verify_authenticity_token after setting devise?
   #skip_before_filter :verify_authenticity_token
 
@@ -16,6 +16,7 @@ class CarsController < ApplicationController
   # GET /cars/1
   # GET /cars/1.json
   def show
+    gon.watch.carid = @car.id
   end
 
   # GET /cars/new
@@ -69,14 +70,13 @@ class CarsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-   # def set_car
-    #  @car = Car.find(params[:id])
-   # end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
       params.require(:car).permit(:make, :description, :model, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :vin, :image )
+    end
+    
+    def load_images
+      @images = Image.all
     end
     
     def check_user

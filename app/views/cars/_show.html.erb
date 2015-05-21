@@ -1,0 +1,7 @@
+<% @images.each do |image| %>
+	<% if image.car_id != nil && image.car_id == @car.id %>
+		<div class="img-thumbnail"><%= image_tag image.extrapic.url(:thumb), alt: image.extrapic.url(:thumb) %></div>
+	<% end %>
+<% end %>
+
+  
