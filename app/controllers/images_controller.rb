@@ -55,7 +55,7 @@ class ImagesController < ApplicationController
       @image = Image.find(params[:id])
       respond_to do |format|
           if @image.destroy 
-            format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }  
+            format.html { redirect_to :back, notice: 'Image was successfully destroyed.' }  
            
           else
             format.html { render :index }
