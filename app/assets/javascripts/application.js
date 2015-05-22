@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require blueimp-gallery-all
 //= require bootstrap-sprockets
 //= require dropzone
 //= require turbolinks

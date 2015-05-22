@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require dropzone/dropzone
+ *= require blueimp-gallery-all
  *= require_self
  */
 @import "bootstrap-sprockets";
@@ -62,6 +63,6 @@ p.price {
 	width: 405px;
 }
 
-.images {
+#links {
 	width: 410px;
 }

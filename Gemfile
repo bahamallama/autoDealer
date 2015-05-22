@@ -29,6 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Paperclick for adding images
 gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
+# gem blue-imp-gallery used for car image gallery
+gem 'blueimp-gallery'
 # gem gon for accessing rails variables in javascript, used in car gallery uploaded
 gem 'gon'
 # Use ActiveModel has_secure_password

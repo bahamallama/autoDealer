@@ -1,6 +1,7 @@
 $(document).ready(function() {
  carid = gon.watch.carid
- });
+});
+
 
 $(document).ready(function(){  
   // disable auto discover
@@ -17,3 +18,4 @@ $(document).ready(function(){
     $.getScript(carid);
   })
 });
+
