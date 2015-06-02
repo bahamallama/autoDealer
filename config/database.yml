@@ -22,4 +22,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: autodealer
+  adapter: mysql
+  pool: 5
+  username: j
+  password: CAF06187A78581528D0AE134E5378CA4C5721E7750A30555B7FFCB4723B21E5C

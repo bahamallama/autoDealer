@@ -47,10 +47,14 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development
+gem 'rvm1-capistrano3', require: false
+gem 'capistrano-bundler', '~> 1.1.2'
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'capistrano-rails', '~> 1.1.1'
 end
 
 
