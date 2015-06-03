@@ -4,10 +4,6 @@ Rails.application.routes.draw do
       resources :users
   end
   
-  devise_scope :user do
-    get "sign_in", to: "devise/sessions#new"
-  end
-  
   resources :cars
 
   resources :roles
