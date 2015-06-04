@@ -4,11 +4,7 @@ Rails.application.routes.draw do
       resources :users
   end
   
-  resources :cars
-
-  resources :roles
-  
-  resources :images
+  resources :cars, :roles, :images
 
   get 'pages/about'
 
