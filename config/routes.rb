@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  
-  devise_for :users, controllers: {sessions: 'devise/sessions', registrations: 'devise/registrations', passwords: 'devise/passwords'}
+  devise_for :users
+  scope "/admin" do
+      resources :users
+  end
   
   resources :cars, :roles, :images
 
