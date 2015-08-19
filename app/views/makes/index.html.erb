@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Makes</h1>
 
-<table>
+<table class="table table-striped table-bordered table-condensed">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,9 +12,7 @@
     <% @makes.each do |make| %>
       <tr>
         <td><%= make.name %></td>
-        <td><%= link_to 'Show', make %></td>
-        <td><%= link_to 'Edit', edit_make_path(make) %></td>
-        <td><%= link_to 'Destroy', make, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', make %> | <%= link_to 'Edit', edit_make_path(make) %> | <%= link_to 'Destroy', make, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +20,4 @@
 
 <br>
 
-<%= link_to 'New Make', new_make_path %>
+<%= link_to 'New Make', new_make_path, class: "btn btn-link" %>
