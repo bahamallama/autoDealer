@@ -5,7 +5,7 @@
 				<%= link_to image_tag(car.image.url(:medium)), car %>
 		         <div class="caption">
 		           <h3>
-					   <%= car.make %>
+					   <%= car.make.name %>
 					   <%= car.model %>
 				   </h3>
 		           <p><%= car.year %> | <%= number_with_delimiter(car.miles, :delimiter => ',') %> Miles</p>
