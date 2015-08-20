@@ -1,0 +1,15 @@
+<h1>Admin Section</h1>
+<p>Welcome <%= current_user.name %></p>
+
+<table class="table table-condensed, table table-hover">
+<tr>
+	<td>
+		<%= link_to "Edit Users - Update Names, Email Addresses, Assign Roles", users_path, class:"btn btn-link" %>
+	</td>
+</tr>
+<tr>
+	<td>
+		<%= link_to "Edit Car Makes - Update Names", makes_path, class:"btn btn-link" %>
+	</td>
+</tr>
+</table>
