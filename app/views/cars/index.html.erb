@@ -18,9 +18,9 @@
 </div>
 
 <% if can? :create, Car %>
-	<%= link_to "New Car", new_car_path, class: "btn btn-link" %> 
+	<%= link_to "Create A New Listing", new_car_path, class: "btn btn-link" %> 
 <% end %>
 
 <% if can? :manage, :all %>
-	| <%= link_to "Admin", admin_index_path, class:"btn btn-link" %>
+	| <%= link_to "Web Site Admin", admin_index_path, class:"btn btn-link" %>
 <% end %>

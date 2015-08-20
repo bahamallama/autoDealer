@@ -18,15 +18,31 @@
 			<li><%= link_to "About", pages_about_path %></li>
 			<li><%= link_to "Contact", pages_contact_path %></li>
       	</ul>
-	  	<ul class="nav navbar-nav navbar-right">
-			<% if user_signed_in? %>
-				<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-				<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-			<% else %>
-				<li><%= link_to "Sign Up", new_user_registration_path %></li>
-				<li><%= link_to "Sign In", new_user_session_path %></li>
-			<% end %>
-		</ul>
+	  	
+		
+		
+  	  <ul class="nav navbar-nav navbar-right">
+  		  <% if user_signed_in? %>
+  		  	<li class="dropdown">
+  		  		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= current_user.name %><span class="caret"></span></a>
+  		    		<ul class="dropdown-menu" role="menu">
+						<li class="dropdown-header">GENERAL</li>
+  						<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+  					  	<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+						<% if can? :create, Car %>
+							<li class="dropdown-header">ADMIN</li>
+							<li><%= link_to "Create A New Listing", new_car_path %> </li>
+						<% end %>
+						<% if can? :manage, :all %>
+							<li><%= link_to "Web Site Admin", admin_index_path %></li>
+						<% end %>
+  		         	</ul>
+  		  	</li>
+  		  <% else %>
+    			<li><%= link_to "Sign Up", new_user_registration_path %></li>
+    			<li><%= link_to "Sign In", new_user_session_path %></li>
+  		  <% end %>
+  	  </ul>		
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
