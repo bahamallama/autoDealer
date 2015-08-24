@@ -1,6 +1,6 @@
 class ModelsController < ApplicationController
   before_action :set_model, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /models
   # GET /models.json
   def index

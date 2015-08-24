@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
- 
-
-  resources :models
 
   get 'admin/index'
 
@@ -9,6 +6,7 @@ Rails.application.routes.draw do
   scope "/admin" do
       resources :users
       resources :makes
+      resources :models
   end
   
   resources :cars, :roles, :images
