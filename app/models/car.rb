@@ -10,12 +10,14 @@ class Car < ActiveRecord::Base
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   end
   
-  validates :make, :model, :year, presence: true
+  validates :make_id, :model_id, :year, presence: true
   validates_length_of :vin, :minimum => 17, :maximum => 17
   
   belongs_to :user
   
   belongs_to :make
+  
+  belongs_to :model
   
   has_many :images, dependent: :destroy
 end

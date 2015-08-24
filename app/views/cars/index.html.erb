@@ -6,7 +6,7 @@
 		         <div class="caption">
 		           <h3>
 					   <%= car.make.name %>
-					   <%= car.model %>
+					   <%= car.model.name %>
 				   </h3>
 		           <p><%= car.year %> | <%= number_with_delimiter(car.miles, :delimiter => ',') %> Miles</p>
 				   <p class="price"><%= number_to_currency(car.price) %></p>
