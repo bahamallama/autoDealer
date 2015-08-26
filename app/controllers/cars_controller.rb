@@ -33,7 +33,7 @@ class CarsController < ApplicationController
   def create
    # @car = Car.new(car_params)
     @car.user_id = current_user.id
-
+    
     respond_to do |format|
       if @car.save
         format.html { redirect_to @car, notice: 'Car was successfully created.' }
@@ -48,6 +48,10 @@ class CarsController < ApplicationController
   # PATCH/PUT /cars/1
   # PATCH/PUT /cars/1.json
   def update
+    
+
+  #  @car = Car.update(order_params)
+    
     respond_to do |format|
       if @car.update(car_params)
         format.html { redirect_to @car, notice: 'Car was successfully updated.' }

@@ -27,7 +27,7 @@
   <div class="form-group">
     	<%= f.label :year, class: "col-sm-2 control-label"%>
 	<div class="col-sm-10">
-    	<%= f.number_field :year, class: "form-control" %>
+		<%= select_year @car.year, {:start_year => 1940, :end_year => Time.zone.now.year + 2, :field_name => :year, :prefix => :car }, class:"form-control" %>
 	</div>
   </div>
   <div class="form-group">
