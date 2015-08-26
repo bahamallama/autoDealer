@@ -13,6 +13,10 @@
   <% end %>
 
   <div class="form-group">
+      <%= f.label :make_id,class: "col-sm-2 control-label" %>
+  	<div class="col-sm-10">
+      	<%= f.collection_select(:make_id, Make.all, :id, :name, {prompt: true}, {:class => 'form-control'}) %>
+  	</div>
     <%= f.label :name,class: "col-sm-2 control-label" %>
 	<div class="col-sm-10">
     	<%= f.text_field :name, :autofocus => true, class: "form-control" %>
