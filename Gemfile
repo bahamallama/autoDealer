@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.0"
+ruby "2.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -48,13 +48,17 @@ gem 'cancancan', '~> 1.10'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development
-gem 'rvm1-capistrano3', require: false
-gem 'capistrano-bundler', '~> 1.1.2'
+#gem 'rvm1-capistrano3', require: false
+#gem 'capistrano-bundler', '~> 1.1.2'
+# Use unicorn as the app server
+gem 'unicorn'
+# Deploy with Capistrano
+gem 'capistrano'
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'capistrano-rails', '~> 1.1.1'
+#  gem 'capistrano-rails', '~> 1.1.1'
 end
 
 

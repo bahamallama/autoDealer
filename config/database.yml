@@ -22,8 +22,10 @@ test:
 
 production:
   <<: *default
-  database: autodealer
-  adapter: mysql
+  adapter: postgresql
+  encoding: unicode
+  database: jsauto
   pool: 5
+  host: localhost
   username: j
-  password: CAF06187A78581528D0AE134E5378CA4C5721E7750A30555B7FFCB4723B21E5C
+  password: Kasparaitis11
