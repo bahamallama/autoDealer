@@ -50,15 +50,17 @@ gem 'cancancan', '~> 1.10'
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development
 #gem 'rvm1-capistrano3', require: false
 #gem 'capistrano-bundler', '~> 1.1.2'
-# Use unicorn as the app server
-gem 'unicorn'
 # Deploy with Capistrano
 gem 'capistrano'
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-#  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
 
 

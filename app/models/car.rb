@@ -1,11 +1,11 @@
 class Car < ActiveRecord::Base
-  if Rails.env.development?
+  if Rails.env.development? || Rails.env.production?
     has_attached_file :image, :styles => { :large => "400x", :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg"
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-  else
+  else 
     has_attached_file :image, :styles => { :large => "400x", :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg", 
-                              :storage => :dropbox,
-                              :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+                            :storage => :dropbox,
+                            :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
                               :path => ":style/:id_:filename"
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   end

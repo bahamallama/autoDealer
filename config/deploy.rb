@@ -1,18 +1,11 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-server "www.bahamallama.cc", :web, :app, :db, primary: true
-
-set :application, 'JsAuto'
-set :repo_url, 'https://github.com/bahamallama/autoDealer.git'
-set :user, 'deployer'
-set :deploy_via, :remote_cache
-set :use_sudo, false
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 # set :branch, "master"
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/#{user}/apps/#{application}'
+# set :deploy_to, '/home/#{user}/apps/#{application}'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -38,43 +31,18 @@ set :deploy_to, '/home/#{user}/apps/#{application}'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-after "deploy", "deploy:cleanup" # keep only the last 5 releases
+# Change these
+server 'www.bahamallama.cc', port: 30000, roles: [:web, :app, :db], primary: true
 
-namespace :deploy do
-  %w[start stop restart].each do |command|
-    desc "#{command} unicorn server"
-    task command, roles: :app, except: {no_release: true} do
-      run "/etc/init.d/unicorn_#{application} #{command}"
-    end
-  end
+set :repo_url,        'git@example.com:bahamallama/autoDealer.git'
+set :application,     'jsAuto'
+set :user,            'deployer'
+set :puma_threads,    [4, 16]
+set :puma_workers,    0
 
-  task :setup_config, roles: :app do
-    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
-    run "mkdir -p #{shared_path}/config"
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-    puts "Now edit the config files in #{shared_path}."
-  end
-  after "deploy:setup", "deploy:setup_config"
-
-  task :symlink_config, roles: :app do
-    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-  end
-  after "deploy:finalize_update", "deploy:symlink_config"
-
-  desc "Make sure local git is in sync with remote."
-  task :check_revision, roles: :web do
-    unless `git rev-parse HEAD` == `git rev-parse origin/master`
-      puts "WARNING: HEAD is not the same as origin/master"
-      puts "Run `git push` to sync changes."
-      exit
-    end
-  end
-  before "deploy", "deploy:check_revision"
-  
-  desc "reload the database with seed data"
-  task :seed do
-    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
-  end
-end
-
+# Don't change these unless you know what you're doing
+set :pty,             true
+set :use_sudo,        false
+set :stage,           :production
+set :deploy_via,      :remote_cache
+set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
