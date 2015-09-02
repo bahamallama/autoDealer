@@ -34,7 +34,7 @@ lock '3.4.0'
 # Change these
 server 'www.bahamallama.cc', user: 'deployer', port: 30000, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@example.com:bahamallama/autoDealer.git'
+set :repo_url,        'ssh://git@github.com/bahamallama/autoDealer.git'
 set :application,     'jsAuto'
 set :user,            'deployer'
 set :puma_threads,    [4, 16]
