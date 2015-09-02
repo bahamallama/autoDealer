@@ -32,7 +32,7 @@ lock '3.4.0'
 # set :keep_releases, 5
 
 # Change these
-server 'www.bahamallama.cc', port: 30000, roles: [:web, :app, :db], primary: true
+server 'www.bahamallama.cc', user: 'deployer', port: 30000, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@example.com:bahamallama/autoDealer.git'
 set :application,     'jsAuto'
