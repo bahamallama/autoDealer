@@ -51,7 +51,7 @@ gem 'cancancan', '~> 1.10'
 #gem 'rvm1-capistrano3', require: false
 #gem 'capistrano-bundler', '~> 1.1.2'
 # Deploy with Capistrano
-gem 'capistrano'
+# gem 'capistrano'
 
 group :production do
   gem 'pg'
