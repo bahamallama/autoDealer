@@ -52,6 +52,9 @@ gem 'cancancan', '~> 1.10'
 #gem 'capistrano-bundler', '~> 1.1.2'
 # Deploy with Capistrano
 # gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
+gem 'capistrano3-puma'
 
 group :production do
   gem 'pg'
