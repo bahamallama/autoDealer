@@ -8,7 +8,7 @@ lock '3.4.0'
 # set :deploy_to, '/home/#{user}/apps/#{application}'
 
 # Default value for :scm is :git
-# set :scm, :git
+set :scm, :git
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -32,7 +32,7 @@ lock '3.4.0'
 # set :keep_releases, 5
 
 # Change these
-server 'www.bahamallama.cc', user: 'deployer', port: 30000, roles: [:web, :app, :db], primary: true
+#server 'bahamallama.cc', user: 'deployer', port: 30000, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'ssh://git@github.com/bahamallama/autoDealer.git'
 set :application,     'jsAuto'
@@ -44,5 +44,6 @@ set :puma_workers,    0
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
+set :branch,          'master'
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
