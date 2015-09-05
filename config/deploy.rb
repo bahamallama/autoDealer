@@ -33,7 +33,7 @@ set :scm, :git
 
 # Change these
 #server 'bahamallama.cc', user: 'deployer', port: 30000, roles: [:web, :app, :db], primary: true
-
+server 'bahamallama.cc', port: 30000, roles: [:web, :app, :db], primary: true
 set :repo_url,        'ssh://git@github.com/bahamallama/autoDealer.git'
 set :application,     'jsAuto'
 set :user,            'deployer'
