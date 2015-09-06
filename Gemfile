@@ -52,10 +52,10 @@ gem 'cancancan', '~> 1.10'
 #gem 'capistrano-bundler', '~> 1.1.2'
 # Deploy with Capistrano
 # gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-rvm'
-gem 'capistrano3-puma'
-gem 'capistrano-figaro'
+#gem 'capistrano-rails'
+#gem 'capistrano-rvm'
+#gem 'capistrano3-puma'
+
 
 group :production do
   gem 'pg'
@@ -65,7 +65,7 @@ group :production do
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
-  gem 'capistrano-figaro',  require: false
+  gem 'capistrano-figaro-yml', '~> 1.0.2'
 end
 
 
