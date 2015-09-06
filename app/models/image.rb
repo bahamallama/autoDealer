@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  if Rails.env.development?
+  if Rails.env.development? || Rails.env.production?
     has_attached_file :extrapic, :styles => { :large => "600x", :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg"
     validates_attachment_content_type :extrapic, :content_type => /\Aimage\/.*\Z/
   else
