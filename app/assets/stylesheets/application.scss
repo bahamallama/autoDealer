@@ -31,6 +31,18 @@ body {
 	font-size: 30px;
 }
 
+h1.jumboName {
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: #D5641C;
+	font-size: 80px;
+}
+
+p.jumboText {
+	font-size: 15px;
+	font-weight: 100;
+}
+
 .navbar-default .navbar-nav > li > a {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -42,6 +54,9 @@ body {
 	clear: left;
 }
 
+.jumbotron {
+	background-color: white;
+}
 p.price {
 	color: #337ab7;
 }
@@ -53,6 +68,11 @@ p.price {
 	width: 410px;
 	padding: 10px;
 	align: center;
+}
+
+.description {
+	text-align: left;
+	margin-top: 10px;
 }
 
 .Car-Image {

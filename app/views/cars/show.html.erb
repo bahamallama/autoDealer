@@ -71,6 +71,8 @@
 <% end %>
 <%= link_to 'Back', cars_path, class: "btn btn-link" %>
 
+<div class="car-details">
+
 <% if can? :update, @car %>
 	<h2>Add Additional Images</h2>
 	<%= form_for(Image.new, html: { multipart: true, class: "dropzone"}) do |f|  %>
@@ -81,7 +83,7 @@
   		</div>
 		<% end %>
 <% end %>
-<div id="blueimp-gallery" class="blueimp-gallery">
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
   <div class="slides"></div>
   <h3 class="title"></h3>
   <a class="prev">‹</a>
@@ -104,5 +106,11 @@ document.getElementById('links').onclick = function (event) {
   blueimp.Gallery(links, options);
 };
 </script>
+
+</div>
+
+<div class="car-details description">
+	<%=  @car.description %>
+</div>
 
 </center>
