@@ -33,6 +33,8 @@ set :puma_init_active_record, false  # Change to true if using ActiveRecord
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+# link the location of paperclip images so we don't lose them after each deploy
+set :linked_dirs, fetch(:linked_dirs, []).push('public/system')
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
