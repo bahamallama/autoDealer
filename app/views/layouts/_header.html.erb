@@ -32,6 +32,7 @@
 						<% if can? :create, Car %>
 							<li class="dropdown-header">ADMIN</li>
 							<li><%= link_to "Create A New Listing", new_car_path %> </li>
+							<li><%= link_to "Show Car Listings", listing_path %> </li>
 						<% end %>
 						<% if can? :manage, :all %>
 							<li><%= link_to "Web Site Admin", admin_index_path %></li>

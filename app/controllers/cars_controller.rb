@@ -7,10 +7,18 @@ class CarsController < ApplicationController
   #remove skip_before_filter :verify_authenticity_token after setting devise?
   #skip_before_filter :verify_authenticity_token
 
+  def listing
+    if current_user.admin?
+      @cars = Car.all
+    else
+      @cars = Car.where(user: current_user)
+    end
+  end
+  
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.all
+    @cars = Car.where(:published => true)
   end
 
   # GET /cars/1
@@ -48,8 +56,6 @@ class CarsController < ApplicationController
   # PATCH/PUT /cars/1
   # PATCH/PUT /cars/1.json
   def update
-    
-
   #  @car = Car.update(order_params)
     
     respond_to do |format|
@@ -76,7 +82,7 @@ class CarsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:make_id, :description, :model_id, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :vin, :image )
+      params.require(:car).permit(:make_id, :description, :model_id, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :vin, :image, :published )
     end
     
     def load_images

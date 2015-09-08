@@ -5,12 +5,12 @@ $(document).ready(function() {
 
 $(document).ready(function(){  
   // disable auto discover
-  Dropzone.autoDiscover = false;
+  Dropzone.autoDiscover = true;
 
   var dropzone = new Dropzone (".dropzone", { 
-    maxFilesize: 256, // set the maximum file size to 256 MB
+    maxFilesize: 400, // set the maximum file size to 256 MB
     paramName: "image[extrapic]", // Rails expects the file upload to be something like model[field_name]
-    addRemoveLinks: false // don't show remove links on dropzone itself.
+	addRemoveLinks: true // don't show remove links on dropzone itself.
   });
 
   dropzone.on("success", function(file) {

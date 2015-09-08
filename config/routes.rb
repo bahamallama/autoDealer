@@ -7,9 +7,12 @@ Rails.application.routes.draw do
       resources :users
       resources :makes
       resources :models
+      get 'listing' => "cars#listing"
   end
   
   resources :cars, :roles, :images
+  
+  #get 'listing' => "cars#listing"
 
   get 'pages/about'
 

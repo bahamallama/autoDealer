@@ -15,6 +15,7 @@ class Ability
         can :destroy, Car do |car|
           car.try(:user) == user
         end
+        can :listing, Car
         #needed to add additional images to cars by car creator
         can :create, Image
       elsif user.regular?

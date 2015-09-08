@@ -1,0 +1,37 @@
+<h1>Showing Listings</h1>
+
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+	  <th>Profile Image</th>
+      <th>Make</th>
+	  <th>Model</th>
+	  <th>Year</th>
+	  <th>Published</th>
+	  <th>User</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+		<td><%= link_to image_tag(car.image.url(:medium)), car %></td>
+        <td><%= car.make.name %></td>
+		<td><%= car.model.name %></td>
+		<td><%= car.year %></td>
+		<td><%= human_boolean(car.published) %></td>
+		<td><%= car.user.name %></td>
+        <td><%= link_to 'Show', car %> | <%= link_to 'Edit', edit_car_path(car) %> | <%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if can? :create, Car %>
+	<%= link_to "Create A New Listing", new_car_path, class: "btn btn-link" %> 
+<% end %>
+
+<% if can? :manage, :all %>
+	| <%= link_to "Web Site Admin", admin_index_path, class:"btn btn-link" %>
+<% end %>
