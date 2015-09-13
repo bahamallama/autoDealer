@@ -70,6 +70,21 @@ p.price {
 	align: center;
 }
 
+.car-payment {
+	background-color: white;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	width: 280px;
+	padding: 10px;
+	align: center;
+	position: relative;
+	top: 62px;
+}
+
+.payment-disclaimer {
+	font-size: 11px;
+}
+
 .description {
 	text-align: left;
 	margin-top: 10px;

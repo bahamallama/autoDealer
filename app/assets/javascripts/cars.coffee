@@ -14,3 +14,4 @@ jQuery ->
       $('#car_model_id').html(options)    
     else
       $('#car_model_id').empty()
+
