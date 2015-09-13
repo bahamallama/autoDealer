@@ -16,6 +16,7 @@ class Ability
           car.try(:user) == user
         end
         can :listing, Car
+        can :featured, Car
         #needed to add additional images to cars by car creator
         can :create, Image
       elsif user.regular?

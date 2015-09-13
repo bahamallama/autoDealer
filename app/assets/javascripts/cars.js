@@ -17,7 +17,12 @@ $(document).ready(function() {
 	  }
 	  
 	  else {
-		if (r <= 0){ // if r is <= 0 then run this code
+		if (r == 0){
+			numOfPayments = (t * 12);// calculate number of payments
+			total = ((p) / (numOfPayments))
+			$('#total').val('$'+total.toFixed(2)); // print to total text box
+		} 
+		if (r < 0){ // if r is <= 0 then run this code
 			alert('Interest Rate is an incorrect value, please enter in form as 0.07 for 7 percent, 0.1 for 10 percent, etc');
 			$('#interest_rate').focus(); // set focus on element to fill in
 		}

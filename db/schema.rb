@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150908003849) do
+ActiveRecord::Schema.define(version: 20150913050135) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "make_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150908003849) do
     t.datetime "image_updated_at"
     t.integer  "user_id"
     t.boolean  "published"
+    t.boolean  "featured"
   end
 
   create_table "images", force: :cascade do |t|

@@ -15,6 +15,14 @@ class CarsController < ApplicationController
     end
   end
   
+  def featured
+    if current_user.admin?
+      @cars = Car.where(:published => true, :featured => true)
+    else
+      @cars = Car.where(:published => true, :featured => true, user: current_user)
+    end
+  end
+  
   # GET /cars
   # GET /cars.json
   def index
@@ -82,7 +90,7 @@ class CarsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:make_id, :description, :model_id, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :vin, :image, :published )
+      params.require(:car).permit(:make_id, :description, :model_id, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :vin, :image, :published, :featured )
     end
     
     def load_images
