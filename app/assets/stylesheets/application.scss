@@ -78,7 +78,22 @@ p.price {
 	padding: 10px;
 	align: center;
 	position: relative;
-	top: 62px;
+	top: 20px;
+}
+
+.side-div-header {
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: #D5641C;
+	font-size: 20px;
+	padding-bottom: 8px
+}
+
+.show-header {
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: #D5641C;
+	font-size: 40px;
 }
 
 .payment-disclaimer {
