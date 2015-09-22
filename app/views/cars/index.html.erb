@@ -1,9 +1,21 @@
 <div class="jumbotron">
-  <h1 class="jumboName">J's Auto</h1>
-  <p class="jumboText">Serving Central New York Since 1980</p>
-  <p>
-  <%= link_to 'About Us', pages_about_path, class: "btn btn-primary", role: "button", style: "color: white" %>
-  </p>
+	<div class="row">
+		<div class="col-md-6">
+  	  		<h1 class="jumboName">J's Auto</h1>
+ 	  		<p class="jumboText">Serving Central New York Since 1980</p>
+  			<p>
+  		  	  <%= link_to 'About Us', pages_about_path, class: "btn btn-primary", role: "button", style: "color: white" %>
+	  		</p>
+		</div>
+		<div class="col-md-6">
+  		  	<div class="cycle-slideshow" data-cycle-slides="> a" data-cycle-caption="#alt-caption" data-cycle-caption-template="{{alt}}" data-cycle-pause-on-hover="true">
+				<% Car.featured.each do |car|%>
+					<%= link_to image_tag(car.image(:large), alt: car.year.to_s + " " + car.make.name + " " + car.model.name), car, data: {alt: car.year.to_s + " " + car.make.name + " " + car.model.name} %>
+   				<% end %> 
+  		  	</div>
+  		  	<div id="alt-caption" class="center"></div>
+		</div>
+	</div>
 </div>
 
 <div class="row">
@@ -24,6 +36,7 @@
 		</div>
 	<% end %>
 </div>
+
 
 <% if can? :create, Car %>
 	<%= link_to "Create A New Listing", new_car_path, class: "btn btn-link" %> 

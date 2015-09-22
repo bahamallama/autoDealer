@@ -11,7 +11,7 @@ jQuery ->
     options = $(models).filter("optgroup[label=#{escaped_make}]").html()
     console.log(options)
     if options
-      $('#car_model_id').html(options)    
+      $('#car_model_id').html(options)
     else
       $('#car_model_id').empty()
 

@@ -20,4 +20,8 @@ class Car < ActiveRecord::Base
   belongs_to :model
   
   has_many :images, dependent: :destroy
+  
+  def self.featured #=> Used to randomize the featured cars, mixed with AJAX should do featured rotation
+      all.where(:published => true, :featured => true)#=> .sample(1)
+  end
 end

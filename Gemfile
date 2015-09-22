@@ -45,6 +45,8 @@ gem 'dropzonejs-rails'
 gem 'devise'
 # user for role management with devise
 gem 'cancancan', '~> 1.10'
+# use for jquery based slide show
+gem 'cycle2-rails', '~> 1.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development

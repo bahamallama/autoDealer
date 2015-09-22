@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require blueimp-gallery-all
 //= require bootstrap-sprockets
+//= require jquery.cycle2
 //= require dropzone
 //= require turbolinks
 //= require_tree .
