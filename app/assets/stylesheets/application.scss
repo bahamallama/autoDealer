@@ -35,12 +35,29 @@ h1.jumboName {
 	font-family: guardian-egyptt, georgia, serif;
 	font-weight: 400;
 	color: #D5641C;
-	font-size: 80px;
+	font-size: 90px;
+	position: relative;
+	top: 60px;
+	left: 60px;
 }
 
 p.jumboText {
 	font-size: 15px;
 	font-weight: 100;
+	color: white;
+	position: relative;
+	top: 40px;
+	left: 60px;
+}
+
+.jumbotron-btn {
+	position: relative;
+	top: 40px;
+	left: 70px;
+}
+
+.featured-image {
+	border: 4px solid white;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -56,10 +73,13 @@ p.jumboText {
 
 .jumbotron {
 	background-color: white;
+	background-image: url(jsAuto.png);
+	height: 412px;
+	padding-top: 40px;
 }
 
 .cycle-slideshow { 
-	width: 50%;
+	width: 400px;
 	margin: 0 auto;
 	margin-left: 90px;
 }
@@ -67,11 +87,12 @@ p.jumboText {
 #alt-caption {
 	font-family: guardian-egyptt, georgia, serif;
 	font-weight: 400;
-	color: #D5641C;
+	color: white;
 	font-size: 20px;
-	width: 50%;
 	margin: 0 auto;
-	margin-left: 90px;
+	margin-left: 100px;
+	font-weight: bold;
+	width: 400px;
 }
 
 p.price {
