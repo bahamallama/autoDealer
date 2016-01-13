@@ -20,7 +20,7 @@
 		</div>
 
 <div class="row">
-	<% Car.published.each do |car| %>
+	<% @cars.each do |car| %>
   		<div class="col-md-3">
 		    <div class="thumbnail">
 				<%= link_to image_tag(car.image.url(:medium)), car %>
@@ -37,8 +37,9 @@
 		</div>
 	<% end %>
 </div>
-
-
+<div class="center">
+<%= will_paginate @cars, class: "digg_pagination" %>
+</div>
 <% if can? :create, Car %>
 	<%= link_to "Create A New Listing", new_car_path, class: "btn btn-link" %> 
 <% end %>

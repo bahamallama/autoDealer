@@ -47,6 +47,8 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 # use for jquery based slide show
 gem 'cycle2-rails', '~> 1.1.0'
+# use will_paginate for pagination, duhhh
+gem 'will_paginate', '~> 3.0.6'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development
