@@ -26,7 +26,7 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.where(:published => true)
+    @cars = Car.where(:published => true).paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /cars/1
