@@ -31,6 +31,8 @@ gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
 # gem blue-imp-gallery used for car image gallery
 gem 'blueimp-gallery'
+# gem gon for accessing rails variables in javascript, used in car gallery uploaded
+gem 'gon'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Figaro for putting information that you want parsed at runtime but not commit to a public git repository like passwords, etc.

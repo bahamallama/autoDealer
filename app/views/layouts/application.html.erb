@@ -10,7 +10,7 @@
 <body>
 
 <%= render 'layouts/header' %>
-
+  <%= include_gon(watch: true) %>
 <div class="container">
 
 	<% flash.each do |name, msg| %>
