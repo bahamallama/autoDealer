@@ -19,6 +19,15 @@
 			<li><%= link_to "Contact", pages_contact_path %></li>
       	</ul>
 	  	
+		<!-- Search function -->
+		<%= search_form_for(@q, :html => {class: "navbar-form navbar-left"}) do |f| %>
+		  <div class="form-group">
+		    <%= f.text_field :make_name_or_model_name_cont, placeholder: "Enter Make OR Model", class: "form-control" %>
+		  </div>
+		  <%= f.submit "Search", class: "btn btn-primary", style: "color: white" %>
+		<% end %>
+		
+
 		
 		
   	  <ul class="nav navbar-nav navbar-right">
