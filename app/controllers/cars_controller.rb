@@ -30,7 +30,11 @@ class CarsController < ApplicationController
       @cars = @cars.where(:published => true).paginate(:page => params[:page], :per_page => 8)
     else
       @q = Car.ransack(params[:q])
-      @cars = @q.result(distinct: true).where(:published => true).paginate(:page => params[:page], :per_page => 8)
+      if @q.result.blank?
+        redirect_to :back, alert: "Sorry, No Results Found!"
+      else
+        @cars = @q.result(distinct: true).where(:published => true).paginate(:page => params[:page], :per_page => 8)
+      end
     end
   end
 
