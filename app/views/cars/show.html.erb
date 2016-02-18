@@ -44,13 +44,14 @@
  	   <%= @car.model.name %>
 	</div>
 	<div class="car-details" >
+		<center>
 		<table border="0" width="400px" style="text-align: left;">
 			<tr>
-				<td width="50%">
+				<td width="40%">
   		  			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Price:</strong>
  		 			<%= number_to_currency(@car.price) %><br />
 				</td>
-				<td width="50%">
+				<td width="60%">
 			 	   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Miles:</strong> 
 				   <%= number_with_delimiter(@car.miles, :delimiter => ',') %>
 			   </td>
@@ -61,14 +62,14 @@
   				   <%= @car.carType %><br />
 			   </td>
 			   <td>
-				   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Drive:</strong> 
-				   <%= @car.drive %>
+				   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Transmission:</strong> 
+				   <%= @car.transmission %>
 			   </td>
 		   </tr>
 		   <tr>
 			   <td>
-  		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Transmission:</strong>
- 		 		   <%= @car.transmission %><br />
+  		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Drive:</strong>
+ 		 		   <%= @car.drive %><br />
 			   </td>
 			   <td>
 				   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Exterior:</strong> 
@@ -95,6 +96,7 @@
 				</td>
 			</tr>
 		</table>
+		</center>
 	</div>
 	<div class="Car-Image">
  		<%= image_tag @car.image(:large), class: "img-rounded text-center" %>
