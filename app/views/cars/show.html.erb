@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-3">
+  	<div class="col-md-3">
 	  <div class="car-payment text-center">
 		  <div class="side-div-header">Calculate Payment</div>
 		  <form class="form-horizontal">
@@ -36,106 +36,100 @@
 		    </div>
 		  </form>
 	  </div>
-</div>
-<div class="col-md-4">
-
-<div class="show-header text-center">
- <%= @car.year %> 
- <%= @car.make.name %> 
- <%= @car.model.name %>
-</div>
-
-<div class="car-details" >
-<table border="0" width="400px">
-	<tr>
-		<td width="50%">
-  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Price:</strong>
- 		 	<%= number_to_currency(@car.price) %><br />
-		</td>
-		<td width="50%">
-			 <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Miles:</strong> 
-			  <%= number_with_delimiter(@car.miles, :delimiter => ',') %>
-		</td>
-	</tr>
-	<tr>
-		<td>
-  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Type:</strong>
-  			<%= @car.carType %><br />
-		</td>
-		<td>
-			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Drive:</strong> 
-			<%= @car.drive %>
-		</td>
-	</tr>
-	<tr>
-		<td>
-  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Transmission:</strong>
- 		 	<%= @car.transmission %><br />
-		</td>
-		<td>
-			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Exterior:</strong> 
-			<%= @car.exterior %>
-		</td>
-	</tr>
-	<tr>
-		<td>
-  		  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Interior:</strong>
-  			<%= @car.interior %><br />
-		</td>
-		<td>
-			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>EPA Mileage:</strong>
-			<%= @car.epa %>
-	</tr>
-	<tr>
-		<td>
-			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Stock #:</strong>
-			<%= @car.id %>
-		</td>
-		<td>
-			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>VIN:</strong> 
-			<%= @car.vin.upcase %>
-		</td>
-	</tr>
-</table>
-</div>
-
-<div class="Car-Image">
- 	<%= image_tag @car.image(:large), class: "img-rounded text-center" %>
-</div>
-
-<div class="text-center">
-<% if can? :update, @car %>
-	<%= link_to 'Edit', edit_car_path(@car), class: "btn btn-link" %> |
-<% end %>
-<% if can? :destroy, @car %>
-	<%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure you want to delete this car?' }, class: "btn btn-link" %> |
-<% end %>
-<%= link_to 'Back', cars_path, class: "btn btn-link" %>
-</div>
-
-<div class="car-details text-center">
-
-<% if can? :update, @car %>
-	<h2>Add Additional Images</h2>
-	<%= form_for(Image.new, html: { multipart: true, class: "dropzone text-center"}) do |f|  %>
-		<%= f.hidden_field :car_id, :value => @car.id %>
-  	  	<div class="fallback text-center">
-    	  <%= f.file_field :extrapic %><br>
-    	  <%= f.submit "Upload Car Images" %>
-  		</div>
+  	</div>
+  	<div class="col-md-5 text-center" >
+	<div class="show-header text-center">
+ 	 	<%= @car.year %> 
+		<%= @car.make.name %> 
+ 	   <%= @car.model.name %>
+	</div>
+	<div class="car-details" >
+		<table border="0" width="400px" style="text-align: left;">
+			<tr>
+				<td width="50%">
+  		  			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Price:</strong>
+ 		 			<%= number_to_currency(@car.price) %><br />
+				</td>
+				<td width="50%">
+			 	   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Miles:</strong> 
+				   <%= number_with_delimiter(@car.miles, :delimiter => ',') %>
+			   </td>
+		   </tr>
+		   <tr>
+			   <td>
+  		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Type:</strong>
+  				   <%= @car.carType %><br />
+			   </td>
+			   <td>
+				   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Drive:</strong> 
+				   <%= @car.drive %>
+			   </td>
+		   </tr>
+		   <tr>
+			   <td>
+  		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Transmission:</strong>
+ 		 		   <%= @car.transmission %><br />
+			   </td>
+			   <td>
+				   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Exterior:</strong> 
+				   <%= @car.exterior %>
+			   </td>
+		   </tr>
+		   <tr>
+			   <td>
+  		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Interior:</strong>
+  				   <%= @car.interior %><br />
+			   </td>
+			   <td>
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>EPA Mileage:</strong>
+					<%= @car.epa %>
+			</tr>
+			<tr>
+				<td>
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Stock #:</strong>
+					<%= @car.id %>
+				</td>
+				<td>
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>VIN:</strong> 
+					<%= @car.vin.upcase %>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="Car-Image">
+ 		<%= image_tag @car.image(:large), class: "img-rounded text-center" %>
+	</div>
+	<div class="text-center">
+		<% if can? :update, @car %>
+			<%= link_to 'Edit', edit_car_path(@car), class: "btn btn-link" %> |
 		<% end %>
-<% end %>
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-  <div class="slides"></div>
-  <a class="prev">‹</a>
-  <a class="next">›</a>
-  <a class="close">×</a>
-  <a class="play-pause"></a>
-  <ol class="indicator"></ol>
-</div>
-<div id="links">
-  <%= render partial: 'show' %>
-</div>
+		<% if can? :destroy, @car %>
+			<%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure you want to delete this car?' }, class: "btn btn-link" %> |
+		<% end %>
+		<%= link_to 'Back', cars_path, class: "btn btn-link" %>
+	</div>
+	<div class="car-details text-center">
+		<% if can? :update, @car %>
+			<h2>Add Additional Images</h2>
+			<%= form_for(Image.new, html: { multipart: true, class: "dropzone text-center"}) do |f|  %>
+				<%= f.hidden_field :car_id, :value => @car.id %>
+  	  			<div class="fallback text-center">
+    	  		  	<%= f.file_field :extrapic %><br>
+    	  			<%= f.submit "Upload Car Images" %>
+  				</div>
+			<% end %>
+		<% end %>
+		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+  		  	<div class="slides"></div>
+  				<a class="prev">‹</a>
+  			  	<a class="next">›</a>
+  			  	<a class="close">×</a>
+  			  	<a class="play-pause"></a>
+  			  	<ol class="indicator"></ol>
+			</div>
+			<div id="links">
+  			  	<%= render partial: 'show' %>
+			</div>
 
 <script>
 document.getElementById('links').onclick = function (event) {
@@ -148,10 +142,14 @@ document.getElementById('links').onclick = function (event) {
 };
 </script>
 
-</div>
-
-<div class="car-details description">
-	<%=  @car.description %>
-</div>
-</div>
+	</div>
+	<div class="car-details description">
+		<%=  @car.description %>
+	</div>
+	</div>
+  	<div class="col-md-3">
+		<div class="car-contact text-center">
+			<p>hi and stuff<br />and more stuff<br /> andaldladjaa;lakdfn<br /></p>
+		</div>
+	</div>
 </div>
