@@ -13,11 +13,14 @@ Rails.application.routes.draw do
   
   resources :cars, :roles, :images
   
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
+  
   #get 'listing' => "cars#listing"
 
   get 'pages/about'
 
-  get 'pages/contact'
+ # get 'pages/contact'
   
   root 'cars#index'
 

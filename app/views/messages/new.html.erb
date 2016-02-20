@@ -1,0 +1,27 @@
+<div class="show-header">J's Auto</div>
+<div class="contactPage-text">You can contact us by phone at (insert phone number here) or by visiting one of our several locations at:</div>
+<div class="contactPage-text">J's Auto<br />Oriskany Blvd<br />Utica, NY 13322</div>
+<div class="contactPage-text">Or by filling out the form below:</div>
+	
+<%= form_for @message, url: contact_path do |message_form| %>
+  	<fieldset>
+    	<div class="form-group">
+			<%= message_form.label :name %>
+			<%= message_form.text_field :name, class: "form-control", placeholder: "Name" %>
+    	</div>
+    
+    	<div class="form-group">
+			<%= message_form.label :email %>
+      		<%= message_form.email_field :email, class: "form-control", placeholder: "Email"%>
+    	</div>
+    
+    	<div class="form-group">
+			<%= message_form.label :content %>
+      		<%= message_form.text_area :content, class: "form-control", placeholder: "Message"%>
+    	</div>
+	</fieldset>
+  
+	<fieldset>
+      	<%= message_form.submit class: "btn btn-primary", value: "Send Message" %>
+  	</fieldset>
+<% end %>
