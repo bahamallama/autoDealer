@@ -6,13 +6,10 @@ class Message
 
   attr_accessor :name, :email, :content
 
-  validates :name,
-    presence: true
+  validates :name, presence: true
 
-  validates :email,
-    presence: true
+  validates :email, presence: true, :format => /.+@.+\..+/i
 
-  validates :content,
-    presence: true
+  validates :content, presence: true
 
 end

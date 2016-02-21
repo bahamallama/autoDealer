@@ -3,8 +3,6 @@ class MessageMailer < ApplicationMailer
 
    def new_message(message)
      @message = message
-    
-     mail subject: "Message from #{message.name}"
-     mail from: @message.email
+     mail(from: @message.email, subject: "New Message from Contact Us Form From: #{@message.name}")
    end
 end
