@@ -152,7 +152,7 @@ document.getElementById('links').onclick = function (event) {
   	<div class="col-md-3">
 		<div class="car-contact">
 			  <div class="side-div-header text-center">Inquire About This Vehicle</div>
-			  <%= form_for @message, url: contact_path do |message_form| %>
+			  <%= form_for @carmessage, url: carcontact_path do |message_form| %>
 			    	<fieldset>
 			      	<div class="form-group">
 			  			<%= message_form.label :name %>

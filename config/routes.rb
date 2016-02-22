@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'messages#new', as: 'contact'
   post 'contact', to: 'messages#create'
   
+  get 'carcontact', to: 'carmessages#new', as: 'carcontact'
+  post 'carcontact', to: 'carmessages#create'
+  
   #get 'listing' => "cars#listing"
 
   get 'pages/about'
