@@ -41,7 +41,8 @@ class CarsController < ApplicationController
   # GET /cars/1
   # GET /cars/1.json
   def show
-    gon.watch.car_id = @car.id    
+    gon.watch.car_id = @car.id
+    @message = Message.new
   end
 
   # GET /cars/new
