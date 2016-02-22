@@ -153,18 +153,29 @@ document.getElementById('links').onclick = function (event) {
 		<div class="car-contact text-center">
 			<div align="center">
 			  <h3>Send A message to Us</h3>
-			  <%= form_for(:contact, :url => { :controller => "contacts", :action => "new" }, :html => { :multipart => true, class: "form" }) do |f| %>
-			  	<%= f.label :name, class: "label" %>
-				<%= f.text_field :name, class: "form" %><br />
-			  	<%= f.label :email, class: "label" %>
-				<%= f.text_field :email, class: "form" %><br />
-				<%= f.text_field :message, class: "form" %><br />
-			    <div class= "">
-			     	<%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-			    </div>
-					<%= f.submit class: "btn btn-primary" %>
-			    </div>
+			  <%= form_for @message, url: contact_path do |message_form| %>
+			    	<fieldset>
+			      	<div class="form-group1">
+			  			<%= message_form.label :name %>
+			  			<%= message_form.text_field :name, class: "form-control1", placeholder: "Name" %>
+			      	</div>
+    
+			      	<div class="form-group1">
+			  			<%= message_form.label :email %>
+			        		<%= message_form.email_field :email, class: "form-control1", placeholder: "Email"%>
+			      	</div>
+    
+			      	<div class="form-group1">
+			  			<%= message_form.label :message %>
+			        		<%= message_form.text_area :content, class: "form-control1", placeholder: "Message", rows: 10 %>
+			      	</div>
+			  	</fieldset>
+  
+			  	<fieldset>
+			        	<%= message_form.submit class: "btn btn-primary", value: "Send Message" %>
+			    	</fieldset>
 			  <% end %>
+			  
 			</div>
 		</div>
 	</div>
