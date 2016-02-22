@@ -10,6 +10,7 @@
   <thead>
     <tr>
 	  <th>Profile Image</th>
+	  <th>Car ID</th>
       <th>Make</th>
 	  <th>Model</th>
 	  <th>Year</th>
@@ -24,6 +25,7 @@
     <% @cars.each do |car| %>
       <tr>
 		<td><%= link_to image_tag(car.image.url(:medium)), car %></td>
+		<td><%= car.id %></td>
         <td><%= car.make.name %></td>
 		<td><%= car.model.name %></td>
 		<td><%= car.year %></td>

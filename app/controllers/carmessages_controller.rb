@@ -19,6 +19,6 @@ class CarmessagesController < ApplicationController
   private
 
     def message_params
-      params.require(:carmessage).permit(:name, :email, :content, :special)
+      params.require(:carmessage).permit(:name, :email, :content, :special, :make, :model, :year, :carID)
     end  
 end

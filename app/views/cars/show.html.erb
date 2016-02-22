@@ -164,6 +164,10 @@ document.getElementById('links').onclick = function (event) {
 			      	</div>
 			  		<div class="special_form">
 			  			<%= message_form.text_field :special %>
+						<%= message_form.text_field :year, :value => @car.year %>
+						<%= message_form.text_field :make, :value => @car.make.name %>
+						<%= message_form.text_field :model, :value => @car.model.name %>
+						<%= message_form.text_field :carID, :value => @car.id %>
 			  		</div>		
 			      	<div class="form-group">
 			  			<%= message_form.label :message %>
