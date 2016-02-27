@@ -37,4 +37,25 @@ $(document).ready(function() {
 	  }
 	  
   });
+  
+  $( "#car_price" ).focusout(function() { // event handler to remove any symbols from price	  
+	  price = ($('#car_price').val()); // get value in price
+	  price = price.replace(/[&\/\\#\.,+()$~%'":*?<>{} ]/g,''); // replace any characters not allowed
+	  $('#car_price').val(price); // set new price without symbols back to the form
+  });  
+  
+  $( "#car_miles" ).focusout(function() { // event handler to remove any symbols from miles
+	  miles = ($('#car_miles').val()); // get value in miles
+	  miles = miles.replace(/[&\/\\#\.,+()$~%'":*?<>{} ]/g,''); // replace any characters not allowed
+	  $('#car_miles').val(miles); // set new miles without symbols back to the form
+  });  
+  
+  $( "#car_vin" ).focusout(function() { // event handler to remove any symbols from miles
+	  vin = ($('#car_vin').val()).replace(/[&\/\\#\.,+()$~%'":*?<>{} ]/g,'');
+	  vinlen = vin.length;; // get value in miles
+	  if (vinlen != 17)
+	  alert("Vin Number is " + vinlen + " Characters Long and Should be 17");
+	  $('#car_vin').val(vin);
+  });   
+  
 });
