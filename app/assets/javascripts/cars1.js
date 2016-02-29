@@ -50,12 +50,13 @@ $(document).ready(function() {
 	  $('#car_miles').val(miles); // set new miles without symbols back to the form
   });  
   
-  $( "#car_vin" ).focusout(function() { // event handler to remove any symbols from miles
+  $( "#car_vin" ).focusout(function() { // event handler to remove any symbols from vin and check length
 	  vin = ($('#car_vin').val()).replace(/[&\/\\#\.,+()$~%'":*?<>{} ]/g,'');
 	  vinlen = vin.length;; // get value in miles
-	  if (vinlen != 17)
-	  alert("Vin Number is " + vinlen + " Characters Long and Should be 17");
-	  $('#car_vin').val(vin);
+	  if (vinlen != 0 && vinlen != 17 ){ // test if vin is not 0 and is not 17
+	  	alert("Vin Number is " + vinlen + " Characters Long and Should be 17");
+	  	$('#car_vin').val(vin);
+  	  }
   });   
   
 });
