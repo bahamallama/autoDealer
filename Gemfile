@@ -51,6 +51,8 @@ gem 'cycle2-rails', '~> 1.1.0'
 gem 'will_paginate', '~> 3.0.6'
 # use ransack for search
 gem 'ransack'
+# use shareable for links to social media
+gem 'shareable'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development
@@ -67,13 +69,13 @@ gem 'capistrano-rails-collection'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
+#  gem 'capistrano',         require: false
+#  gem 'capistrano-rvm',     require: false
+#  gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
-  gem 'capistrano-figaro-yml', '~> 1.0.2'
-  gem 'capistrano-rails-collection'
+#  gem 'capistrano3-puma',   require: false
+#  gem 'capistrano-figaro-yml', '~> 1.0.2'
+#  gem 'capistrano-rails-collection'
 end
 
 

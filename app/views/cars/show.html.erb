@@ -101,6 +101,9 @@
 	<div class="Car-Image">
  		<%= image_tag @car.image(:large), class: "img-rounded text-center" %>
 	</div>
+	<div class="car-details">
+		<%= render_shareable :buttons=> ['facebook', 'twitter','pinterest', 'google_plus'] %>
+	</div>
 	<div class="text-center">
 		<% if can? :update, @car %>
 			<%= link_to 'Edit', edit_car_path(@car), class: "btn btn-link" %> |
