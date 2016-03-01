@@ -4,7 +4,9 @@ $(document).ready(function() {
 	  	r = ($('#interest_rate').val()); // get interest rate from form
 	  	p = ($('#price').val()); // get price from form
 	  	t = ($('#term').val()); //get length of loan from form
-  		p = p.replace(/[&\/\\#,+()$~%'":*?<>{}]/g,''); // strip out all characters but numbers and leave decimal
+  		t = t.replace(/[&\/\\#,+()$~%'":*?<>!^@=_\[\];`|{} ]/g,''); // strip out all characters but numbers and leave decimal
+		r = r.replace(/[&\/\\#,+()$~%'":*?<>!^@=_\[\];`|{} ]/g,''); // strip out all characters but numbers and leave decimal
+		p = p.replace(/[&\/\\#,+()$~%'":*?<>!^@=_\[\];`|{} ]/g,''); // strip out all characters but numbers and leave decimal
   		p = Math.round(p) // round out decimal
 	  
 	  if (r > 0 && t > 0 && p > 0){ // if statement to check to see if all entries are valid, ie. positive values
@@ -40,22 +42,23 @@ $(document).ready(function() {
   
   $( "#car_price" ).focusout(function() { // event handler to remove any symbols from price	  
 	  price = ($('#car_price').val()); // get value in price
-	  price = price.replace(/[&\/\\#\.,+()$~%'":*?<>{} ]/g,''); // replace any characters not allowed
+	  price = price.replace(/[&\/\\#\.,+()$~%'":*?<>!^@=_\[\];`|{} ]/g,'');// replace any characters not allowed
 	  $('#car_price').val(price); // set new price without symbols back to the form
   });  
   
   $( "#car_miles" ).focusout(function() { // event handler to remove any symbols from miles
 	  miles = ($('#car_miles').val()); // get value in miles
-	  miles = miles.replace(/[&\/\\#\.,+()$~%'":*?<>{} ]/g,''); // replace any characters not allowed
+	  miles = miles.replace(/[&\/\\#\.,+()$~%'":*?<>!^@=_\[\];`|{} ]/g,''); // replace any characters not allowed
 	  $('#car_miles').val(miles); // set new miles without symbols back to the form
   });  
   
-  $( "#car_vin" ).focusout(function() { // event handler to remove any symbols from vin and check length
-	  vin = ($('#car_vin').val()).replace(/[&\/\\#\.,+()$~%'":*?<>{} ]/g,'');
+  $( "#car_vin" ).change(function() { // event handler to remove any symbols from vin and check length
+	  vin = ($('#car_vin').val()).replace(/[&\/\\#\.,+()$~%'":*?<>!^@=_\[\];`|{} ]/g,'');
 	  vinlen = vin.length;; // get value in miles
 	  if (vinlen != 0 && vinlen != 17 ){ // test if vin is not 0 and is not 17
 	  	alert("Vin Number is " + vinlen + " Characters Long and Should be 17");
 	  	$('#car_vin').val(vin);
+		$('#car_vin').focus();
   	  }
   });   
   
