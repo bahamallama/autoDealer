@@ -51,8 +51,8 @@ gem 'cycle2-rails', '~> 1.1.0'
 gem 'will_paginate', '~> 3.0.6'
 # use ransack for search
 gem 'ransack'
-# use shareable for links to social media
-gem 'shareable'
+# use social-share-button for social media sharing
+gem 'social-share-button'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development

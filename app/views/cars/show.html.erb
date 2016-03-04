@@ -36,6 +36,11 @@
 		    </div>
 		  </form>
 	  </div>
+	  <br />
+  	<div class="car-details text-center">
+		<div class="side-div-header">Share This Vehicle!</div>
+  		<%= social_share_button_tag(@car.year.to_s + " " + @car.make.name + " " + @car.model.name, :popup => "true") %>
+  	</div>
   	</div>
   	<div class="col-md-5 text-center" >
 	<div class="show-header text-center">
@@ -100,9 +105,6 @@
 	</div>
 	<div class="Car-Image">
  		<%= image_tag @car.image(:large), class: "img-rounded text-center" %>
-	</div>
-	<div class="car-details">
-		<%= render_shareable :buttons=> ['facebook', 'twitter','pinterest', 'google_plus'] %>
 	</div>
 	<div class="text-center">
 		<% if can? :update, @car %>

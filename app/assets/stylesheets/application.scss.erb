@@ -17,6 +17,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "social-share-button";
 
 body {
 	background-color: #f5f5f1;
@@ -156,12 +157,40 @@ p.price {
 	margin-right: auto ;
 }
 
-nav.share {display:inline-block;} /* shareable's nav tag */
-nav.share div {float:left;}
-nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium sized buttons */
-#___plusone_0 {font-size: default !important;}
-.fb_iframe_widget span { vertical-align: top; }
-.fb_edge_widget_with_comment { vertical-align: top;}
-.fb-like{display:inline-block; margin-right: 4px;}
-* html .fb-like{display:inline}/* ie6 inline block fix*/
-*+html .fb-like{display:inline}/* ie7 inline block fix*/
+.social-share-button-facebook {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("facebook.png") no-repeat;
+}
+.social-share-button-twitter {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("twitter.png") no-repeat;
+
+}
+.social-share-button-google_plus {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("google_plus.png") no-repeat;
+}
+.social-share-button-google_bookmark{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("google_bookmark.png") no-repeat;
+}
+.social-share-button-delicious{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("delicious.png") no-repeat;
+}
+.social-share-button-pinterest{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("pinterest.png") no-repeat;
+}
