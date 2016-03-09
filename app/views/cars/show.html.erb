@@ -117,7 +117,7 @@
 	</div>
 	<div class="car-details text-center">
 		<% if can? :update, @car %>
-			<h2>Add Additional Images</h2>
+			<div class="side-div-header">Add Additional Images</div>
 			<%= form_for(Image.new, html: { multipart: true, class: "dropzone text-center"}) do |f|  %>
 				<%= f.hidden_field :car_id, :value => @car.id %>
   	  			<div class="fallback text-center">
