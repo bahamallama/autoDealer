@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-  default to: 'don@bahamallama.cc'
+  default to: ENV["EMAIL_DEFAULT_TO"]
 
    def new_message(message)
      @message = message

@@ -1,5 +1,5 @@
 class CarmessageMailer < ApplicationMailer
-  default to: 'don@bahamallama.cc'
+  default to: ENV["EMAIL_DEFAULT_TO"]
 
    def new_carmessage(carmessage)
      @carmessage = carmessage
