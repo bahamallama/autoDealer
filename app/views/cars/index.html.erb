@@ -25,6 +25,7 @@
 				<%= link_to image_tag(car.image.url(:medium)), car %>
 				<% if car.sold %><div class="text-center center-block carAlert">Sold</div><% end %>
 				<% if car.sale %><div class="text-center center-block carAlert">Sale</div><% end %>
+				<% if car.reduced %><div class="text-center center-block carAlert">Reduced</div><% end %>
 		         <div class="caption">
 		           <h3>
 					   <%= car.make.name %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160616175723) do
+ActiveRecord::Schema.define(version: 20160616182633) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "make_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160616175723) do
     t.string   "epa"
     t.boolean  "sold"
     t.boolean  "sale"
+    t.boolean  "reduced"
   end
 
   create_table "images", force: :cascade do |t|
