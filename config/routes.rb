@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :models
       get 'listing' => "cars#listing"
       get 'featured' => "cars#featured"
+      get 'sold' => "cars#sold"
   end
   
   resources :cars, :roles, :images

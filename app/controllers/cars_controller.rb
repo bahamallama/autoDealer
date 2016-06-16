@@ -23,6 +23,14 @@ class CarsController < ApplicationController
     end
   end
   
+  def sold
+    if current_user.admin?
+      @cars = Car.where(:sold => true)
+    else
+      @cars = Car.where(:sold => true, user: current_user)
+    end
+  end
+  
   # GET /cars
   # GET /cars.json
   def index    
@@ -100,7 +108,7 @@ class CarsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:make_id, :description, :model_id, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :epa, :vin, :image, :published, :featured )
+      params.require(:car).permit(:make_id, :description, :model_id, :year, :price, :carType, :transmission, :interior, :miles, :drive, :exterior, :epa, :vin, :image, :published, :featured, :sold )
     end
     
     def load_images
