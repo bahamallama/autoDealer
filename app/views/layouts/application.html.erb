@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>J's Auto</title>
+  <title>J's Auto Inc.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,7 +12,6 @@
 <%= render 'layouts/header' %>
   <%= include_gon(watch: true) %>
 <div class="container">
-
 	<% flash.each do |name, msg| %>
 		<% if msg.is_a?(String) %>
 			<div class="alert alert-<%= name.to_s == 'notice' ? 'success' : 'danger' %> alert-dismissable">
@@ -25,7 +24,6 @@
 	<%= yield %>
 
 	<%= render 'layouts/footer' %>
-
 </div>
 
 </body>

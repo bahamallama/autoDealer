@@ -1,13 +1,13 @@
 <div class="jumbotron">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-7">
   	  		<h1 class="jumboName">J's Auto Inc.</h1>
  	  		<p class="jumboText">Serving Central New York Since 1980</p>
 			<p>
   		  	  <%= link_to 'About Us', pages_about_path, class: "btn btn-primary", role: "button", style: "color: white" %>
 	  		</p>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-5">
 			<div id="alt-caption" class="center-block"></div>
   		  	<div class="cycle-slideshow  center-block" data-cycle-slides="> a" data-cycle-caption="#alt-caption" data-cycle-caption-template="{{alt}}" data-cycle-pause-on-hover="true">
 				<% Car.featured.each do |car|%>
