@@ -105,6 +105,7 @@
 	</div>
 	<div class="Car-Image">
  		<%= image_tag @car.image(:large), class: "img-rounded text-center" %>
+		<% if @car.sold %><div class="text-center center-block carAlertShow">Sold</div><% end %>
 	</div>
 	<div class="text-center">
 		<% if can? :update, @car %>
