@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'listing' => "cars#listing"
       get 'featured' => "cars#featured"
       get 'sold' => "cars#sold"
+      get 'sale' => "cars#sale"
   end
   
   resources :cars, :roles, :images
