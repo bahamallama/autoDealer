@@ -78,18 +78,18 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # Required for Devise remember to change local host and port to web server and port, ie. jsauto.com and port 80
-  config.action_mailer.default_url_options = { host: 'jsautoinc.com', port: 80 }
+  config.action_mailer.default_url_options = { host: ENV["MAIL_HOST"], port: 80 }
 
   # May need to do this: http://www.google.com/accounts/DisplayUnlockCaptcha and also update the devise initializer email address
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.default :charset => "utf-8"  
   config.action_mailer.smtp_settings = {  
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: ENV["GMAIL_DOMAIN"],
+    address: ENV["MAIL_ADDRESS"],
+    port: ENV["MAIL_Port"],
+    domain: ENV["MAIL_DOMAIN"],
     authentication: "plain",
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
+    user_name: ENV["MAIL_USERNAME"],
+    password: ENV["MAIL_PASSWORD"]
   }
 end
