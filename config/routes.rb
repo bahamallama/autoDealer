@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'sold' => "cars#sold"
       get 'sale' => "cars#sale"
       get 'reduced' => "cars#reduced"
+      resources :sites
   end
   
   resources :cars, :roles, :images

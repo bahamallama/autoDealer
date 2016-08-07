@@ -5,10 +5,14 @@ class ApplicationController < ActionController::Base
   
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_filter :set_search
+  before_filter :set_search, :set_site
 
   def set_search
   @q=Car.search(params[:q])
+  end
+  
+  def set_site
+    @site = Site.find(1)
   end
 
     protected

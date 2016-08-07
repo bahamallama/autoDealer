@@ -1,8 +1,8 @@
 <div class="jumbotron">
 	<div class="row">
 		<div class="col-md-7">
-  	  		<h1 class="jumboName">J's Auto Inc.</h1>
- 	  		<p class="jumboText">Serving Central New York Since 1980</p>
+  	  		<h1 class="jumboName"><%= @site.name %></h1>
+ 	  		<p class="jumboText"><%= @site.tag %></p>
 			<p>
   		  	  <%= link_to 'About Us', pages_about_path, class: "btn btn-primary", role: "button", style: "color: white" %>
 	  		</p>

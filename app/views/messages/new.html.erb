@@ -1,6 +1,6 @@
-<div class="show-header">J's Auto Inc.</div>
-<div class="contactPage-text">You can contact us by phone at 315-738-6081 or 315-335-8219 or by visiting one of our locations at:</div>
-<div class="contactPage-text">J's Auto<br />1218 Erie Street<br />Utica, NY 13502</div>
+<div class="show-header"><%= @site.name %></div>
+<div class="contactPage-text">You can contact us by phone at <%= @site.contact %> or by visiting one of our locations at:</div>
+<div class="contactPage-text"><%= @site.location %><br /><%= @site.address %><br /><%= @site.city %>, <%= @site.state %> <%= @site.zip %></div>
 <div class="contactPage-text">Or by filling out the form below:</div>
 	
 <%= form_for @message, url: contact_path do |message_form| %>
