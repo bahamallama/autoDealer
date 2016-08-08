@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805233621) do
+ActiveRecord::Schema.define(version: 20160808194510) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "make_id"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20160805233621) do
     t.string   "zip",        default: "zip code"
     t.datetime "created_at",                                       null: false
     t.datetime "updated_at",                                       null: false
+    t.string   "jumbotron"
   end
 
   create_table "users", force: :cascade do |t|
