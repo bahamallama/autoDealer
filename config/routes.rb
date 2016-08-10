@@ -7,12 +7,12 @@ Rails.application.routes.draw do
       resources :users
       resources :makes
       resources :models
+      resources :sites
       get 'listing' => "cars#listing"
       get 'featured' => "cars#featured"
       get 'sold' => "cars#sold"
       get 'sale' => "cars#sale"
       get 'reduced' => "cars#reduced"
-      resources :sites
   end
   
   resources :cars, :roles, :images
