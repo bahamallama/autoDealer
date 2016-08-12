@@ -59,8 +59,8 @@ body { // sets basic body styles
 .jumbotron { // jumbotron settings
 	-moz-border-radius: 15px;
 	border-radius: 15px;
- 	background-color: #f5f5f1;
-	background: image-url("JsAutoInc2.jpg") no-repeat;
+ 	background-color: rgba(255, 204, 102, 0.1);
+	background: no-repeat;
 }
 
 .cycle-slideshow { // settings for featured car slideshow on top of jumbotron
