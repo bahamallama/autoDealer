@@ -19,69 +19,115 @@
 @import "bootstrap";
 @import "social-share-button";
 
-body {
-	background-color: #f5f5f1;
+// color palette for the style is from: http://www.colorcombos.com/color-schemes/99/ColorCombo99.html
+
+body { // sets basic body styles
+	background-color: #FFFFFF;
 	color: #333333;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar-default .navbar-brand {
+.navbar { // sets top navbar color and settings
+	background-color: #003366;
+}
+
+.navbar-default .navbar-brand { // sets font info
 	font-family: guardian-egyptt, georgia, serif;
 	font-weight: 400;
-	color: #D5641C;
+	color:  #FFCC66;
 	font-size: 30px;
 }
 
-.btn-primary{
+.navbar-default .navbar-brand:hover { // sets the hover color of links in the navbar
+	color: white;
+}
+
+.btn-primary { // sets the text color and background color of the primary buttons
 	color: white; 
+	background-color: #336699;
 }
 
-.btn-primary:visited {
+.btn-primary:visited { // sets the text color of previously clicked primary buttons
 	color: white;
 }
 
-h1.jumboName {
-	font-family: guardian-egyptt, georgia, serif;
-	font-weight: 400;
-	color: #D5641C;
-	font-size: 90px;
-}
-
-p.jumboText {
-	font-size: 15px;
-	font-weight: 100;
+.btn-primary:hover { // sets the text color and background color of the hover state of buttons
 	color: white;
-
+	background-color: #003366;
 }
 
-.featured-image {
-	border: 4px solid white;
-}
-
-.navbar-default .navbar-nav > li > a {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	font-weight: bold;
-	color: #337ab7;
-}
-
-.col-md-3:nth-child(4n+1) {
-	clear: left;
-}
-
-.jumbotron {
+.jumbotron { // jumbotron settings
 	-moz-border-radius: 15px;
 	border-radius: 15px;
  	background-color: #f5f5f1;
 	background: image-url("JsAutoInc2.jpg") no-repeat;
 }
 
-.cycle-slideshow { 
+.cycle-slideshow { // settings for featured car slideshow on top of jumbotron
 	width: 400px;
-	
 }
 
-.carAlert{
+h1.jumboName { //sets the site title name styles on the Jumbotron
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: #FFCC66;
+	font-size: 90px;
+	text-shadow: -1px 0 #003366, 0 1px #003366, 1px 0 #003366, 0 -1px #003366;
+}
+
+p.jumboText { // sets the site tagline properties under the jumboName on the Jumbotron
+	font-size: 15px;
+	font-weight: 100;
+	color:  #FFCC66;
+
+}
+
+.featured-image { // sets the properties for the featured image of cars on top of the jumbotron
+	border: 4px solid white;
+}
+
+.navbar-default .navbar-nav > li > a:link,
+.navbar-default .navbar-nav > li > a:visited,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:link,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:visited { // nav bar links, .dropdown-menu is for links on user drop down menu
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color:  #FFCC66;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover { // nav bar links hover states, .dropdown-menu is for links on user drop down menue
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color:  white;
+	background-color: transparent;
+}
+
+.dropdown-menu { // for user login drop down menu
+	background-color: #336699;
+}
+
+.dropdown-header { // menu section text in drop down menu
+	color: white;
+}
+
+.col-md-3:nth-child(4n+1) {
+	clear: left;
+}
+
+.thumbnail, .jumbotron, .navbar, .car-payment, .car-details, .car-contact, .Car-Image { // sets drop shadow
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.thumbnail, .car-payment, .car-details, .car-contact { // sets background color and the "a" and last value sets alpha channel
+	background-color:  rgba(255, 204, 102, 0.1);
+}
+
+.carAlert { // sale, reduced, sold label on car/index
 	background-color: red;
 	width: 200px; 
 	color: white;
@@ -89,7 +135,7 @@ p.jumboText {
 	text-transform: uppercase;
 }
 
-.carAlertShow{
+.carAlertShow { // sale, reduced, sold label on car/show 
 	background-color: red;
 	width: 400px; 
 	color: white;
@@ -97,7 +143,7 @@ p.jumboText {
 	text-transform: uppercase;
 }
 
-#alt-caption {
+#alt-caption { // year and make and model above featured car slideshow
 	font-family: guardian-egyptt, georgia, serif;
 	font-weight: 400;
 	color: white;
@@ -105,11 +151,11 @@ p.jumboText {
 	width: 400px;
 }
 
-p.price {
+p.price { // price for car on index page inside thumb nail
 	color: #337ab7;
 }
 
-.car-details {
+.car-details { // car details section on car/show
 	background-color: white;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
@@ -117,7 +163,7 @@ p.price {
 	align: center;
 }
 
-.car-payment {
+.car-payment { // car payment section
 	background-color: white;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
@@ -126,37 +172,47 @@ p.price {
 	margin-top: 10px;
 }
 
-.side-div-header {
-	font-family: guardian-egyptt, georgia, serif;
-	font-weight: 400;
-	color: #D5641C;
-	font-size: 20px;
-	padding-bottom: 8px
+.car-payment, .description, .car-details, .car-contact, .Car-Image { // borders and background color for these sections on car/show
+	border-style: solid;
+	border-width: 1px;
+	border-color: #336699;
+	background-color:  rgba(255, 204, 102, 0.1);
 }
 
-.show-header {
+.side-div-header { // header for side divs on car/show
 	font-family: guardian-egyptt, georgia, serif;
 	font-weight: 400;
-	color: #D5641C;
+	color: #336699;
+	font-size: 20px;
+	padding-bottom: 8px;
+}
+
+.show-header { // settings for the heading text on car/show
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: #336699;
 	font-size: 40px;
 }
 
-.payment-disclaimer {
+.payment-disclaimer { // settings for payment disclaimer under payment calculator on car/show
 	font-size: 11px;
 }
 
-.description {
+.description { // settings for car/show description text
+	padding: 10px 10px 10px 10px;
 	text-align: left;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.Car-Image {
+.Car-Image { // settings for main image on car/show page
 	padding: 10px 5px 10px 5px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-top: 10px;
 }
 
-.car-contact {
-	background-color: white;
+.car-contact { // Car contact area settings
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 	padding: 10px;
@@ -164,21 +220,23 @@ p.price {
 	margin-top: 10px;
 }
 
-.contactPage-text {
+.contactPage-text { // text on the Contact Page
 	font-size: 15px;
 	font-weight: 100;
 	margin-bottom: 10px;
 }
 
-.special_form {
+.special_form { // leave alone used to test wether or not a bot is filling out an email contact form
 	display: none;
 }
 
-#links {
+#links { // multiple car image links
 	width: 410px;
 	margin-left: auto ;
 	margin-right: auto ;
 }
+
+// .social-share-button code for sharing via social media
 
 .social-share-button-facebook {
     display: inline-block;
@@ -217,6 +275,9 @@ p.price {
     height: 36px;
     background: image-url("pinterest.png") no-repeat;
 }
+
+// pagination code
+
 .digg_pagination {
   
   cursor: default;

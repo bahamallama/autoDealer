@@ -4,7 +4,7 @@
   	  		<h1 class="jumboName"><%= @site.name %></h1>
  	  		<p class="jumboText"><%= @site.tag %></p>
 			<p>
-  		  	  <%= link_to 'About Us', pages_about_path, class: "btn btn-primary", role: "button", style: "color: white" %>
+  		  	  <%= link_to 'About Us', pages_about_path, class: "btn btn-primary", role: "button" %>
 	  		</p>
 		</div>
 		<div class="col-md-5">
@@ -33,7 +33,7 @@
 				   </h3>
 		           <p><%= car.year %> | <%= number_with_delimiter(car.miles, :delimiter => ',') %> Miles</p>
 				   <p class="price"><%= number_to_currency(car.price) %></p>
-		           <p><%= link_to 'Details', car, class: "btn btn-primary", role: "button", style: "color: white" %></p>
+		           <p><%= link_to 'Details', car, class: "btn btn-primary", role: "button" %></p>
 		         </div>
 		     </div>
 		</div>
