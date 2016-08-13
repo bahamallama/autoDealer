@@ -65,9 +65,10 @@ gem 'capistrano-rvm'
 gem 'capistrano3-puma'
 gem 'capistrano-figaro-yml', '~> 1.0.2'
 gem 'capistrano-rails-collection'
+gem 'pg'
+gem "therubyracer"
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 #  gem 'capistrano',         require: false
 #  gem 'capistrano-rvm',     require: false
