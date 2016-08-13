@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//
 //= require social-share-button
 //= require jquery
 //= require jquery.turbolinks
@@ -20,3 +21,4 @@
 //= require dropzone
 //= require turbolinks
 //= require_tree .
+

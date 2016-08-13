@@ -10,6 +10,12 @@
 <body>
 <%= render 'layouts/header' %>
   <%= include_gon(watch: true) %>
+  <% if @site.theme == 'Autumn' %>
+	<div  class="leaves"></div>
+	<script type="text/javascript">
+		fallingLeaves();
+	</script>
+  <% end %>
 <div class="container">
 	<% flash.each do |name, msg| %>
 		<% if msg.is_a?(String) %>
