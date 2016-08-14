@@ -1,83 +1,4 @@
-/* line 4, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination {
-  cursor: default;
-  /* self-clearing method: */
-}
-
-/* line 8, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination a, .digg_pagination span, .digg_pagination em {
-  padding: 0.2em 0.5em;
-  display: block;
-  float: left;
-  margin-right: 1px;
-}
-
-/* line 13, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination .disabled {
-  background-color: white;
-  color: #999999;
-  border: 1px solid #dddddd;
-}
-
-/* line 17, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination .current {
-  font-style: normal;
-  font-weight: bold;
-  background: #2e6ab1;
-  color: white;
-  border: 1px solid #2e6ab1;
-}
-
-/* line 23, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination a {
-  background-color: white;
-  text-decoration: none;
-  color: #105cb6;
-  border: 1px solid #9aafe5;
-}
-
-/* line 28, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination a:hover, .digg_pagination a:focus {
-  color: #000033;
-  border-color: #000033;
-}
-
-/* line 31, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination .page_info {
-  background: #2e6ab1;
-  color: white;
-  padding: 0.4em 0.6em;
-  width: 22em;
-  margin-bottom: 0.3em;
-  text-align: center;
-}
-
-/* line 38, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination .page_info b {
-  color: #000033;
-  background: #6aa6ed;
-  padding: 0.1em 0.25em;
-}
-
-/* line 42, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-.digg_pagination:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-/* line 48, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-* html .digg_pagination {
-  height: 1%;
-}
-
-/* line 50, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/cars.scss */
-*:first-child + html .digg_pagination {
-  overflow: hidden;
-}
-/* line 1, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 1, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 body {
   background-color: #fff;
   color: #333;
@@ -86,52 +7,51 @@ body {
   line-height: 18px;
 }
 
-/* line 9, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 9, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-/* line 15, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 15, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-/* line 21, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 21, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 a {
   color: #000;
 }
-/* line 23, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 23, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 a:visited {
   color: #666;
 }
-/* line 26, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 26, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 a:hover {
   color: #fff;
-  background-color: #000;
 }
 
-/* line 33, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 32, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 38, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 37, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 #notice {
   color: green;
 }
 
-/* line 42, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 41, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-/* line 48, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 47, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -140,7 +60,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 55, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 54, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -151,7 +71,7 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-/* line 65, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/scaffolds.scss */
+/* line 64, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/scaffolds.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
@@ -9858,14 +9778,334 @@ button.close {
     display: none !important;
   }
 }
-/* line 22, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/*
+
+        Creating a sprite from following images:
+
+        app/assets/images/sprites/social-share-button/baidu.png (16x16)
+        app/assets/images/sprites/social-share-button/delicious.png (16x16)
+        app/assets/images/sprites/social-share-button/douban.png (16x16)
+        app/assets/images/sprites/social-share-button/email.png (16x16)
+        app/assets/images/sprites/social-share-button/facebook.png (16x16)
+        app/assets/images/sprites/social-share-button/flickr.png (16x16)
+        app/assets/images/sprites/social-share-button/google_bookmark.png (16x16)
+        app/assets/images/sprites/social-share-button/google_plus.png (16x16)
+        app/assets/images/sprites/social-share-button/kaixin001.png (16x16)
+        app/assets/images/sprites/social-share-button/pinterest.png (16x16)
+        app/assets/images/sprites/social-share-button/plurk.png (16x16)
+        app/assets/images/sprites/social-share-button/qq.png (16x16)
+        app/assets/images/sprites/social-share-button/renren.png (16x16)
+        app/assets/images/sprites/social-share-button/tqq.png (16x16)
+        app/assets/images/sprites/social-share-button/tumblr.png (16x16)
+        app/assets/images/sprites/social-share-button/twitter.png (16x16)
+        app/assets/images/sprites/social-share-button/weibo.png (16x16)
+
+        Output files:
+          app/assets/images/sprites/social-share-button.png
+          app/assets/stylesheets/social-share-button.scss
+
+        Output size:
+          80x64
+
+*/
+/* line 31, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-baidu {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px 0px no-repeat;
+}
+
+/* line 32, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-delicious {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px 0px no-repeat;
+}
+
+/* line 33, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-douban {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -16px no-repeat;
+}
+
+/* line 34, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-email {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -16px no-repeat;
+}
+
+/* line 35, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px 0px no-repeat;
+}
+
+/* line 36, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-flickr {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -16px no-repeat;
+}
+
+/* line 37, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-google_bookmark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -32px no-repeat;
+}
+
+/* line 38, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-google_plus {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -32px no-repeat;
+}
+
+/* line 39, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-kaixin001 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -32px no-repeat;
+}
+
+/* line 40, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-pinterest {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px 0px no-repeat;
+}
+
+/* line 41, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-plurk {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -16px no-repeat;
+}
+
+/* line 42, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-qq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -32px no-repeat;
+}
+
+/* line 43, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-renren {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -48px no-repeat;
+}
+
+/* line 44, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-tqq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -48px no-repeat;
+}
+
+/* line 45, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-tumblr {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -48px no-repeat;
+}
+
+/* line 46, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-twitter {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -48px no-repeat;
+}
+
+/* line 47, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-weibo {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -64px 0px no-repeat;
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  /* line 50, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-baidu {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 51, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-delicious {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 52, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-douban {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 53, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-email {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 54, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-facebook {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 55, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-flickr {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 56, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-google_bookmark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 57, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-google_plus {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 58, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-kaixin001 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 59, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-pinterest {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 60, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-plurk {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 61, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-qq {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 62, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-renren {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 63, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-tqq {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 64, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-tumblr {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 65, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-twitter {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 66, /Users/donrawls/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-weibo {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -64px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+}
+/* line 23, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 body {
   background-color: #f5f5f1;
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 28, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 29, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .navbar-default .navbar-brand {
   font-family: guardian-egyptt, georgia, serif;
   font-weight: 400;
@@ -9873,7 +10113,17 @@ body {
   font-size: 30px;
 }
 
-/* line 35, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 36, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.btn-primary {
+  color: white;
+}
+
+/* line 40, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.btn-primary:visited {
+  color: white;
+}
+
+/* line 44, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 h1.jumboName {
   font-family: guardian-egyptt, georgia, serif;
   font-weight: 400;
@@ -9881,19 +10131,19 @@ h1.jumboName {
   font-size: 90px;
 }
 
-/* line 42, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 51, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 p.jumboText {
   font-size: 15px;
   font-weight: 100;
   color: white;
 }
 
-/* line 49, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 58, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .featured-image {
   border: 4px solid white;
 }
 
-/* line 53, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 62, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .navbar-default .navbar-nav > li > a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -9901,25 +10151,43 @@ p.jumboText {
   color: #337ab7;
 }
 
-/* line 60, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 69, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .col-md-3:nth-child(4n+1) {
   clear: left;
 }
 
-/* line 64, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 73, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .jumbotron {
-  background-color: white;
-  background-image: url(/assets/jsAuto-6630c99767700cc04f7b9148ac1f4b885dfc0d66de32f12829db59b183f7da4e.png);
-  height: 412px;
-  padding-top: 40px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #f5f5f1;
+  background: no-repeat;
 }
 
-/* line 71, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 80, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .cycle-slideshow {
   width: 400px;
 }
 
-/* line 76, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 85, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.carAlert {
+  background-color: red;
+  width: 200px;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* line 93, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.carAlertShow {
+  background-color: red;
+  width: 400px;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* line 101, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 #alt-caption {
   font-family: guardian-egyptt, georgia, serif;
   font-weight: 400;
@@ -9928,32 +10196,31 @@ p.jumboText {
   width: 400px;
 }
 
-/* line 84, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 109, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 p.price {
   color: #337ab7;
 }
 
-/* line 88, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 113, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .car-details {
   background-color: white;
   -moz-border-radius: 15px;
   border-radius: 15px;
-  width: 410px;
-  padding: 10px;
+  padding: 10px 5px 10px 5px;
   align: center;
 }
 
-/* line 97, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 121, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .car-payment {
   background-color: white;
   -moz-border-radius: 15px;
   border-radius: 15px;
   padding: 10px;
   align: center;
-  top: 20px;
+  margin-top: 10px;
 }
 
-/* line 106, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 130, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .side-div-header {
   font-family: guardian-egyptt, georgia, serif;
   font-weight: 400;
@@ -9962,7 +10229,7 @@ p.price {
   padding-bottom: 8px;
 }
 
-/* line 114, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 138, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .show-header {
   font-family: guardian-egyptt, georgia, serif;
   font-weight: 400;
@@ -9970,23 +10237,176 @@ p.price {
   font-size: 40px;
 }
 
-/* line 121, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 145, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .payment-disclaimer {
   font-size: 11px;
 }
 
-/* line 125, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 149, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .description {
   text-align: left;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-/* line 130, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 155, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 .Car-Image {
   padding: 10px 5px 10px 5px;
 }
 
-/* line 134, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/application.scss.erb */
+/* line 159, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.car-contact {
+  background-color: white;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  padding: 10px;
+  align: center;
+  margin-top: 10px;
+}
+
+/* line 168, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.contactPage-text {
+  font-size: 15px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+/* line 174, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.special_form {
+  display: none;
+}
+
+/* line 178, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
 #links {
   width: 410px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 184, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.social-share-button-facebook {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(/assets/facebook-90b88fc172c3a0bcbefaec1c3e56958fd7153c85573dfd03204286b114fc8863.png) no-repeat;
+}
+
+/* line 190, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.social-share-button-twitter {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(/assets/twitter-91f086f0338f55e2fd54d8ada0211de878033c44a7b89891f6aa35d475c5fc4b.png) no-repeat;
+}
+
+/* line 197, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.social-share-button-google_plus {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(/assets/google_plus-52e004556bbf76691e2242eb932077d4132df7a2e310918baab2eaf76cdfe093.png) no-repeat;
+}
+
+/* line 203, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.social-share-button-google_bookmark {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(/assets/google_bookmark-1f0434370f74e492486b8793dda60430c2821a98b63cd7218f381a508f5a22eb.png) no-repeat;
+}
+
+/* line 209, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.social-share-button-delicious {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(/images/delicious.png) no-repeat;
+}
+
+/* line 215, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.social-share-button-pinterest {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(/assets/pinterest-452b5fffe7f6c45542b4a8b7a28f3d553831320f2ac45e3ec518cc36fa67be1e.png) no-repeat;
+}
+
+/* line 221, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination {
+  cursor: default;
+  /* self-clearing method: */
+}
+
+/* line 225, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination a, .digg_pagination span, .digg_pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+/* line 230, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination .disabled {
+  background-color: white;
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+/* line 234, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 1px solid #2e6ab1;
+}
+
+/* line 240, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination a {
+  background-color: white;
+  text-decoration: none;
+  color: #105cb6;
+  border: 1px solid #9aafe5;
+}
+
+/* line 245, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination a:hover, .digg_pagination a:focus {
+  color: #000033;
+  border-color: #000033;
+}
+
+/* line 248, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+
+/* line 255, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+
+/* line 259, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+.digg_pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 265, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+* html .digg_pagination {
+  height: 1%;
+}
+
+/* line 267, /Users/donrawls/Desktop/autodealer/app/assets/stylesheets/Theme1/application.scss */
+*:first-child + html .digg_pagination {
+  overflow: hidden;
 }
