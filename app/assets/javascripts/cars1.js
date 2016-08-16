@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function () {
+	
   $('#calcPayment').click(function() {
 	  var p, r, rate, t, total, numOfPayments; // create variables
 	  	r = ($('#interest_rate').val()); // get interest rate from form

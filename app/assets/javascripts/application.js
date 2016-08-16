@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //
-//= require social-share-button
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require social-share-button
 //= require blueimp-gallery-all
 //= require bootstrap-sprockets
 //= require jquery.cycle2

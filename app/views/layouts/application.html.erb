@@ -11,8 +11,8 @@
 <%= render 'layouts/header' %>
   <%= include_gon(watch: true) %>
   <% if @site.theme == 'Autumn' %>
-	<div  class="leaves"></div>
-	<script type="text/javascript">
+	<div class="leaves"></div>
+	<script type="text/javascript" defer="defer">
 		fallingLeaves();
 		window.onload=fallingLeaves
 	</script>

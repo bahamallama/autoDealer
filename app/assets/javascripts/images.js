@@ -1,4 +1,4 @@
-$(document).ready(function(){  
+$(document).ready(function(){
   // disable auto discover
   Dropzone.autoDiscover = true;
   
