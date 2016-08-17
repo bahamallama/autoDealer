@@ -12,9 +12,10 @@
   <%= include_gon(watch: true) %>
   <% if @site.theme == 'Autumn' %>
 	<div class="leaves"></div>
-	<script type="text/javascript" defer="defer">
+	<script type="text/javascript">
 		fallingLeaves();
-		window.onload=fallingLeaves
+		$(document).ready(fallingLeaves);
+		$(document).on('page:load', fallingLeaves);
 	</script>
   <% end %>
 <div class="container">
