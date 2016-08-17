@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {	
 	
   $('#calcPayment').click(function() {
 	  var p, r, rate, t, total, numOfPayments; // create variables
