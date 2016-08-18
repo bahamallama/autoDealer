@@ -1,0 +1,342 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require dropzone/dropzone
+ *= require blueimp-gallery-all
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "social-share-button";
+
+// http://teamcolors.arc90.com
+
+body { // sets basic body styles
+	background-color: #B0B7BC;
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar { // sets top navbar color and settings
+	background-color: #002244;
+	border-color: white;
+}
+
+.navbar-default .navbar-brand { // sets font info
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color:  #A5ACAF;
+	font-size: 30px;
+}
+
+.navbar-default .navbar-brand:hover { // sets the hover color of links in the navbar
+	color: white;
+}
+
+.btn-primary { // sets the text color and background color of the primary buttons
+	color: white; 
+	background-color: #A5ACAF;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+.btn-primary:visited { // sets the text color of previously clicked primary buttons
+	color: white;
+}
+
+.btn-primary:hover { // sets the text color and background color of the hover state of buttons
+	color: #00338D;
+	background-color: #ACC0C6;
+	border-color: #755330;
+}
+
+.jumbotron { // jumbotron settings
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+ 	background-color: #D1CEC5;
+	background: no-repeat;
+}
+
+.cycle-slideshow { // settings for featured car slideshow on top of jumbotron
+	width: 400px;
+}
+
+h1.jumboName { //sets the site title name styles on the Jumbotron
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: white;
+	font-size: 90px;
+	text-shadow: -1px 0 #002244, 0 1px #002244, 1px 0 #002244, 0 -1px #002244;
+}
+
+p.jumboText { // sets the site tagline properties under the jumboName on the Jumbotron
+	font-size: 15px;
+	font-weight: 100;
+	color:  white;
+
+}
+
+.featured-image { // sets the properties for the featured image of cars on top of the jumbotron
+	border: 4px solid white;
+}
+
+#alt-caption { // year and make and model above featured car slideshow
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: white;
+	font-size: 20px;
+	width: 400px;
+}
+
+.navbar-default .navbar-nav > li > a:link,
+.navbar-default .navbar-nav > li > a:visited,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:link,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:visited { // nav bar links, .dropdown-menu is for links on user drop down menu
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color:  #A5ACAF;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover { // nav bar links hover states, .dropdown-menu is for links on user drop down menue
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color:  white;
+	background-color: transparent;
+}
+
+.navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { // for user login drop down menu
+	background-color: #00338D;
+	color: white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+.dropdown-menu { // actual drop down menu settings
+	background-color: #00338D;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+.dropdown-header { // menu section text in drop down menu
+	color: white;
+	background-color: #ACC0C6;
+}
+
+.col-md-3:nth-child(4n+1) {
+	clear: left;
+}
+
+.thumbnail, .jumbotron, .navbar, .car-payment, .car-details, .car-contact, .Car-Image, .dropdown-menu { // sets drop shadow
+	box-shadow: 10px 10px 5px #002244;
+}
+
+.thumbnail, .car-payment, .description, .car-details, .car-contact, .Car-Image { // sets background color and the "a" and last value sets alpha channel
+	border-style: solid;
+	border-width: 1px;
+	border-color: #00338D;
+	background-color:  white;
+}
+
+.carAlert { // sale, reduced, sold label on car/index
+	background-color: red;
+	width: 200px; 
+	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.carAlertShow { // sale, reduced, sold label on car/show 
+	background-color: red;
+	width: 400px; 
+	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+p.price { // price for car on index page inside thumb nail
+	color: #00338D;
+}
+
+.car-details { // car details section on car/show
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px 5px 10px 5px;
+	align: center;
+}
+
+.car-payment { // car payment section
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+	align: center;
+	margin-top: 10px;
+}
+
+.side-div-header { // header for side divs on car/show
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: black;
+	font-size: 20px;
+	padding-bottom: 8px;
+}
+
+.show-header { // settings for the heading text on car/show
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 400;
+	color: white;
+	font-size: 40px;
+}
+
+.payment-disclaimer { // settings for payment disclaimer under payment calculator on car/show
+	font-size: 11px;
+}
+
+.description { // settings for car/show description text
+	padding: 10px 10px 10px 10px;
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.Car-Image { // settings for main image on car/show page
+	padding: 10px 5px 10px 5px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-top: 10px;
+}
+
+.car-contact { // Car contact area settings
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+	align: center;
+	margin-top: 10px;
+}
+
+.contactPage-text { // text on the Contact Page
+	font-size: 15px;
+	font-weight: 100;
+	margin-bottom: 10px;
+}
+
+.special_form { // leave alone used to test wether or not a bot is filling out an email contact form
+	display: none;
+}
+
+#links { // multiple car image links
+	width: 410px;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+.img-thumbnail { // sets the background color of images on car/show
+	background-color: #00338D;
+}
+// .social-share-button code for sharing via social media
+
+.social-share-button-facebook {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("facebook.png") no-repeat;
+}
+.social-share-button-twitter {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("twitter.png") no-repeat;
+
+}
+.social-share-button-google_plus {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("google_plus.png") no-repeat;
+}
+.social-share-button-google_bookmark{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("google_bookmark.png") no-repeat;
+}
+.social-share-button-delicious{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("delicious.png") no-repeat;
+}
+.social-share-button-pinterest{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: image-url("pinterest.png") no-repeat;
+}
+
+// pagination code
+
+.digg_pagination {
+  
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+	background-color: white;
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .digg_pagination a {
+	  background-color: white;
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .digg_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }
