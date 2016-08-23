@@ -32,7 +32,7 @@ role :db,  %w{deployer@bahamallama.cc}, port: 30000
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-config.assets.logger = Logger.new $stdout
+
 
 
 # Custom SSH Options
