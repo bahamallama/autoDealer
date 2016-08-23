@@ -52,7 +52,7 @@ class ImagesController < ApplicationController
     # DELETE /images/1
     # DELETE /images/1.json
     def destroy
-      @image = Image.find(params[:id])
+      @image = Image.all.find(params[:id])
       respond_to do |format|
           if @image.destroy 
             format.html { redirect_to :back, notice: 'Image was successfully destroyed.' }  

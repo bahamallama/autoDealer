@@ -19,7 +19,7 @@ class Car < ActiveRecord::Base
   
   belongs_to :model
   
-  has_many :images, dependent: :destroy
+  has_many :images, :dependent => :destroy
   
   def self.featured #=> Shows only featured cars
       all.where(:published => true, :featured => true)#=> .sample(1)
