@@ -68,6 +68,7 @@ gem 'capistrano-rails-collection'
 gem "therubyracer"
 
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
 #  gem 'capistrano',         require: false
 #  gem 'capistrano-rvm',     require: false
