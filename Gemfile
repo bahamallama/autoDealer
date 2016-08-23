@@ -65,7 +65,6 @@ gem 'capistrano-rvm'
 gem 'capistrano3-puma'
 gem 'capistrano-figaro-yml', '~> 1.0.2'
 gem 'capistrano-rails-collection'
-gem 'pg'
 gem "therubyracer"
 
 group :production do
@@ -84,7 +83,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  
+  gem 'pg'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
