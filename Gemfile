@@ -66,7 +66,7 @@ gem 'capistrano3-puma'
 gem 'capistrano-figaro-yml', '~> 1.0.2'
 gem 'capistrano-rails-collection'
 gem 'capistrano-faster-assets', '~> 1.0'
-
+gem 'therubyracer'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
