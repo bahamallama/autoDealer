@@ -65,7 +65,7 @@ gem 'capistrano-rvm'
 gem 'capistrano3-puma'
 gem 'capistrano-figaro-yml', '~> 1.0.2'
 gem 'capistrano-rails-collection'
-gem "therubyracer"
+
 
 group :production do
   gem 'pg'
