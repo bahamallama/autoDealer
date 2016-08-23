@@ -59,24 +59,25 @@ gem 'social-share-button'
 #gem 'rvm1-capistrano3', require: false
 #gem 'capistrano-bundler', '~> 1.1.2'
 # Deploy with Capistrano
-gem 'capistrano'
-gem 'capistrano-rails'
+
+
 gem 'capistrano-rvm'
 gem 'capistrano3-puma'
 gem 'capistrano-figaro-yml', '~> 1.0.2'
-gem 'capistrano-rails-collection'
+
 
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-#  gem 'capistrano',         require: false
+  gem 'capistrano',         require: false
 #  gem 'capistrano-rvm',     require: false
-#  gem 'capistrano-rails',   require: false
+  gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
+  gem 'capistrano-faster-assets', '~> 1.0'
 #  gem 'capistrano3-puma',   require: false
 #  gem 'capistrano-figaro-yml', '~> 1.0.2'
-#  gem 'capistrano-rails-collection'
+  gem 'capistrano-rails-collection'
 end
 
 

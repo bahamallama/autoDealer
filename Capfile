@@ -9,7 +9,8 @@ require 'capistrano/rvm'
 require 'capistrano/puma'
 
 require 'capistrano/figaro_yml'
-
+require 'capistrano/rails/assets'
+require 'capistrano/faster_assets'
 require 'capistrano/rails/collection'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
