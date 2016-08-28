@@ -44,7 +44,9 @@
 	<% end %>
 </div>
 <div>
-	<%= will_paginate @cars, class: "digg_pagination"%>
+	<% unless @cars.empty? %>
+		<%= will_paginate @cars, class: "digg_pagination"%>
+	<% end %>
 </div>
 <% if can? :create, Car %>
 	<%= link_to "Create A New Listing", new_car_path, class: "btn btn-link" %> 
