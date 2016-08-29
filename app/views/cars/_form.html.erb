@@ -50,7 +50,7 @@
   <div class="form-group">
     	<%= f.label :car_Type, class: "col-sm-2 control-label" %>
 	<div class="col-sm-10">
-		<%= f.select :carType, options_for_select([['Convertible'],['Coupe'],['Sedan'],['Sports'],['SUV'],['Truck'],['Van/Minivan'],['Wagon'],['Hatchback'],['Hybrid']], [@car.carType]), {prompt: true}, { :class => 'form-control' } %>
+		<%= f.select :carType, options_for_select([['4dr Hatchback'],['Coupe'],['Convertible'],['Sedan'],['2dr Hatchback'],['Wagon'],['Regular Cab Pickup'],['Extended Cab Pickup'],['Crew Cab Pickup'],['2dr SUV'], ['4dr SUV'], ['Convertible SUV'], ['Cargo Van'], ['Passenger Van'], ['Cargo Minivan'], ['Passenger Minivan']], [@car.carType]), {prompt: true}, { :class => 'form-control' } %>
 	</div>
   </div>
   <div class="form-group">
