@@ -19,6 +19,18 @@ result = " ";
 return result;
 }
 
+function Transmission(styleID){
+    $.ajax({
+    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/transmissions?availability=standard&fmt=json&api_key=fbg8dxjqeaeug88jy8npf8hh",// setting styleID number in URL with passed variable
+        //force to handle it as text
+        dataType: "text",
+        success: function(data) {
+			var json = $.parseJSON(data);
+			$('#car_transmission').find("option[text=" + json.transmissions[0].transmissionType + "]").attr("selected", true);
+	}});
+}
+
+
 $(document).ready(function(){
     $('#Vinbutton').click(function(){
         //start ajax request
@@ -39,7 +51,9 @@ $(document).ready(function(){
 						$('#car_epa').val(json.MPG.city + "/" + json.MPG.highway); //sets the City/Highway MPG
 						$('#car_drive').val(Drive(json.drivenWheels)); // call to the Drive function to provide shortened name
 						$('optgroup[label*="' + json.make.name + '"]').find("option[text=" + json.model.name + "]").attr("selected", true); // set model name after going through the make optgroup
-                    }
+              // alert(json.years[0].styles[0].id);    
+			  Transmission(json.years[0].styles[0].id); // pass style id to Transmission function to get Trans Type
+		    }
               });
     });
 });

@@ -56,7 +56,7 @@
   <div class="form-group">
     	<%= f.label :transmission, class: "col-sm-2 control-label" %>
 	<div class="col-sm-10">
-		<%= f.select :transmission, options_for_select([['Automatic'],['Manual']], [@car.transmission]), {prompt: true}, { :class => 'form-control' } %>
+		<%= f.select :transmission, options_for_select([['AUTOMATIC'],['MANUAL']], [@car.transmission]), {prompt: true}, { :class => 'form-control' } %>
 	</div>
   </div>
   <div class="form-group">
