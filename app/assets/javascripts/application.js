@@ -19,6 +19,7 @@
 //= require bootstrap-sprockets
 //= require jquery.cycle2
 //= require_tree .
+//= require trix
 //= require dropzone
 //= require turbolinks
 

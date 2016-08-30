@@ -154,7 +154,7 @@ document.getElementById('links').onclick = function (event) {
 
 	</div>
 	<div class="car-details description">
-		<%=  @car.description %>
+		<%=  @car.description.html_safe %>
 	</div>
 	</div>
   	<div class="col-md-3">
