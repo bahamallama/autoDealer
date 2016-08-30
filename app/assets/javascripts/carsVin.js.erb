@@ -21,7 +21,7 @@ return result;
 
 function Transmission(styleID){
     $.ajax({
-    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/transmissions?availability=standard&fmt=json&api_key=fbg8dxjqeaeug88jy8npf8hh",// setting styleID number in URL with passed variable
+    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/transmissions?availability=standard&fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
         //force to handle it as text
         dataType: "text",
         success: function(data) {
@@ -35,7 +35,7 @@ $(document).ready(function(){
     $('#Vinbutton').click(function(){
         //start ajax request
                 $.ajax({
-                 url: "https://api.edmunds.com/api/vehicle/v2/vins/" + $('#car_vin').val() +"?fmt=json&api_key=fbg8dxjqeaeug88jy8npf8hh",// setting vin number in URL with $('#car_vin').val()
+                 url: "https://api.edmunds.com/api/vehicle/v2/vins/" + $('#car_vin').val() +"?fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting vin number in URL with $('#car_vin').val()
                     //force to handle it as text
                     dataType: "text",
                     success: function(data) {
