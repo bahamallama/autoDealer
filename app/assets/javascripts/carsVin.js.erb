@@ -27,9 +27,46 @@ function Transmission(styleID){
         success: function(data) {
 			var json = $.parseJSON(data);
 			$('#car_transmission').find("option[text=" + json.transmissions[0].transmissionType + "]").attr("selected", true);
+			 Equipment(styleID); // pass style id to Equipment function to list equipment
 	}});
 }
 
+function Equipment(styleID){
+    $.ajax({
+    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/equipment?availability=used&fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
+        //force to handle it as text
+        dataType: "text",
+        success: function(data) {
+			var json = $.parseJSON(data);
+			var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
+			element.editor.insertHTML("<strong>Equipment</strong>"); // write to the Editor
+			$.each(json.equipment, function(index, value){ // iterate though the array
+				element.editor.insertHTML("<ul><li>" + json.equipment[index].name + "</li></ul")
+				element.editor.insertLineBreak(); // creates a new line	
+			});
+			element.editor.deleteInDirection("backward");
+			Engine(styleID); // pass style id to Engine Function to list engine details
+	}});
+}
+
+function Engine(styleID){
+    $.ajax({
+    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/engines?fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
+        //force to handle it as text
+        dataType: "text",
+        success: function(data) {
+			var json = $.parseJSON(data);
+			var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
+			element.editor.insertHTML("<strong>Engine</strong>"); // write to the Editor
+			element.editor.insertHTML("<ul><li>" + json.engines[0].name + "</li></ul>");
+			element.editor.insertLineBreak(); // creates a new line	
+			element.editor.insertHTML("<ul><li>Cylinders: " + json.engines[0].cylinder + "</li></ul>")
+			element.editor.insertLineBreak(); // creates a new line	
+			element.editor.insertHTML("<ul><li>Horsepower: " + json.engines[0].horsepower + "</li></ul>")
+			element.editor.insertLineBreak(); // creates a new line	
+			element.editor.insertHTML("<ul><li>Fuel: " + json.engines[0].fuelType + "</li></ul>")
+	}});
+}
 
 $(document).ready(function(){
     $('#Vinbutton').click(function(){
@@ -44,14 +81,20 @@ $(document).ready(function(){
                         var json = $.parseJSON(data);
                         //now json variable contains data in json format
                         //let's display a few items
-						$('#car_make_id').find("option[text=" + json.make.name + "]").attr("selected", true); // set make name in DDB
+						var year = json.years[0].year; // set variable for model year
+						var makeName = json.make.name; // set variable for car make
+						var modelName = json.model.name; // set variabel for car model
+						var trim = json.years[0].styles[0].trim; // set variable for car trim
+						$('#car_make_id').find("option[text=" + makeName + "]").attr("selected", true); // set make name in DDB
 						$('#car_carType').find("option[text=" + json.categories.vehicleStyle + "]").attr("selected", true); // set vehicle car type
 						//$('#trim').val(json.years[0].styles[0].trim); // to set the trim when a DB value added
-						$('#car_year').val(json.years[0].year); // sets the year of the car
+						$('#car_year').val(year); // sets the year of the car
 						$('#car_epa').val(json.MPG.city + "/" + json.MPG.highway); //sets the City/Highway MPG
 						$('#car_drive').val(Drive(json.drivenWheels)); // call to the Drive function to provide shortened name
-						$('optgroup[label*="' + json.make.name + '"]').find("option[text=" + json.model.name + "]").attr("selected", true); // set model name after going through the make optgroup
-              // alert(json.years[0].styles[0].id);    
+						$('optgroup[label*="' + json.make.name + '"]').find("option[text=" + modelName + "]").attr("selected", true); // set model name after going through the make optgroup
+						var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
+						element.editor.insertHTML("<strong>" + year + " " + makeName + " " + modelName + " " + trim +"</strong>");
+						element.editor.insertLineBreak(); // creates a new line   
 			  Transmission(json.years[0].styles[0].id); // pass style id to Transmission function to get Trans Type
 		    }
               });
