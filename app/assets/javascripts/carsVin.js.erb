@@ -1,3 +1,12 @@
+jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
+                                                $(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
+                                                $(window).scrollLeft()) + "px");
+    return this;
+}
+
 function Drive(driveType){
 var result;
  if (driveType == "rear wheel drive") {
@@ -32,6 +41,7 @@ function Transmission(styleID){
 }
 
 function Equipment(styleID){
+	$('#info').append('<div id="Equipment">Looking up Equipment Information ...</div>');
     $.ajax({
     	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/equipment?availability=used&fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
         //force to handle it as text
@@ -46,10 +56,14 @@ function Equipment(styleID){
 			});
 			element.editor.deleteInDirection("backward");
 			Engine(styleID); // pass style id to Engine Function to list engine details
-	}});
+	},complete: function (data) {
+      $('#Equipment').append(' COMPLETED'); 
+     }
+});
 }
 
 function Engine(styleID){
+	$('#info').append('<div id="Engine">Looking up Engine Information ...</div>');
     $.ajax({
     	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/engines?fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
         //force to handle it as text
@@ -58,19 +72,102 @@ function Engine(styleID){
 			var json = $.parseJSON(data);
 			var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
 			element.editor.insertHTML("<strong>Engine</strong>"); // write to the Editor
-			element.editor.insertHTML("<ul><li>" + json.engines[0].name + "</li></ul>");
+			element.editor.insertHTML("<ul><li>" + json.engines[0].name + "</li>");
 			element.editor.insertLineBreak(); // creates a new line	
-			element.editor.insertHTML("<ul><li>Cylinders: " + json.engines[0].cylinder + "</li></ul>")
+			element.editor.insertHTML("<li>Cylinders: " + json.engines[0].cylinder + "</li>");
 			element.editor.insertLineBreak(); // creates a new line	
-			element.editor.insertHTML("<ul><li>Horsepower: " + json.engines[0].horsepower + "</li></ul>")
+			element.editor.insertHTML("<li>Horsepower: " + json.engines[0].horsepower + "</li>");
 			element.editor.insertLineBreak(); // creates a new line	
-			element.editor.insertHTML("<ul><li>Fuel: " + json.engines[0].fuelType + "</li></ul>")
-	}});
+			element.editor.insertHTML("<li>Fuel: " + json.engines[0].fuelType + "</li></ul>");
+			element.editor.insertLineBreak();
+			element.editor.deleteInDirection("backward");
+	},complete: function (data) {
+      $('#Engine').append(' COMPLETED'); 
+     }
+});
+	OptionsAudio(styleID);
 }
+
+function OptionsAudio(styleID){
+	$('#info').append('<div id="Audio">Looking up Audio Information ...</div>');
+    $.ajax({
+    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/equipment?availability=standard&equipmentType=AUDIO_SYSTEM&fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
+        //force to handle it as text
+        dataType: "text",
+        success: function(data) {
+			var json = JSON.parse(data);
+			var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
+				element.editor.insertHTML("<strong>Audio Options</strong>")
+			var attributes = [].concat.apply([], json.equipment.map(function(v) { return v["attributes"]||[] }));
+	
+			$.each(attributes, function(index, value){ // iterate through the array
+			    element.editor.insertHTML("<ul><li>" + value.name + " : " + value.value + "</li></ul>");
+			    element.editor.insertLineBreak(); // creates a new line 
+			});
+				element.editor.deleteInDirection("backward");			
+	},complete: function (data) {
+      $('#Audio').append(' COMPLETED'); 
+     }
+ });
+	OptionsMirrors(styleID);
+}
+
+function OptionsMirrors(styleID){
+	$('#info').append('<div id="Mirrors">Looking up Mirrors Information ...</div>');
+    $.ajax({
+    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/equipment?availability=standard&equipmentType=MIRRORS&fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
+        //force to handle it as text
+        dataType: "text",
+        success: function(data) {
+			var json = JSON.parse(data);
+			var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
+				element.editor.insertHTML("<strong>Mirror Options</strong>")
+			var attributes = [].concat.apply([], json.equipment.map(function(v) { return v["attributes"]||[] }));
+			$.each(attributes, function(index, value){ // iterate through the array
+			    element.editor.insertHTML("<ul><li>" + value.name + " : " + value.value + "</li></ul>");
+			    element.editor.insertLineBreak(); // creates a new line 
+			});
+				element.editor.deleteInDirection("backward");			
+	},complete: function (data) {
+      $('#Mirrors').append(' COMPLETED'); 
+     }
+ });
+	OptionsOther(styleID);
+}				
+
+function OptionsOther(styleID){
+	$('#info').append('<div id="Other">Looking up Other Information ...</div>');
+    $.ajax({
+    	url: "https://api.edmunds.com/api/vehicle/v2/styles/" + styleID + "/equipment?availability=standard&equipmentType=OTHER&fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting styleID number in URL with passed variable
+        //force to handle it as text
+        dataType: "text",
+        success: function(data) {
+			var json = JSON.parse(data);
+			var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
+				element.editor.insertHTML("<strong>Other Options</strong>")
+			var attributes = [].concat.apply([], json.equipment.map(function(v) { return v["attributes"]||[] }));
+	
+			$.each(attributes, function(index, value){ // iterate through the array
+			    element.editor.insertHTML("<ul><li>" + value.name + " : " + value.value + "</li></ul>");
+			    element.editor.insertLineBreak(); // creates a new line 
+			});
+				element.editor.deleteInDirection("backward");			
+	},complete: function (data) {
+      $('#Other').append(' COMPLETED');
+	  $('#info').append('<div id="disclaimer"><strong>Please Review Information To Ensure Accuracy!</strong></div>');
+	  $('#info').append('<div><input type="button" value="OK" class="btn btn-primary" id="OKbutton" style="float: right;"></div>');
+	  $('#OKbutton').click(function(){
+	  	$('#popUP').hide();
+	  });
+     }
+ });
+}				
 
 $(document).ready(function(){
     $('#Vinbutton').click(function(){
         //start ajax request
+		$('#popUP').show().center();
+		$('#info').append('<div id="basicCar">Looking up Car Information ...</div>');
                 $.ajax({
                  url: "https://api.edmunds.com/api/vehicle/v2/vins/" + $('#car_vin').val() +"?fmt=json&api_key=<%= ENV["EDMUNDS_API_KEY"] %>",// setting vin number in URL with $('#car_vin').val()
                     //force to handle it as text
@@ -87,7 +184,6 @@ $(document).ready(function(){
 						var trim = json.years[0].styles[0].trim; // set variable for car trim
 						$('#car_make_id').find("option[text=" + makeName + "]").attr("selected", true); // set make name in DDB
 						$('#car_carType').find("option[text=" + json.categories.vehicleStyle + "]").attr("selected", true); // set vehicle car type
-						//$('#trim').val(json.years[0].styles[0].trim); // to set the trim when a DB value added
 						$('#car_year').val(year); // sets the year of the car
 						$('#car_epa').val(json.MPG.city + "/" + json.MPG.highway); //sets the City/Highway MPG
 						$('#car_drive').val(Drive(json.drivenWheels)); // call to the Drive function to provide shortened name
@@ -95,8 +191,10 @@ $(document).ready(function(){
 						var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
 						element.editor.insertHTML("<strong>" + year + " " + makeName + " " + modelName + " " + trim +"</strong>");
 						element.editor.insertLineBreak(); // creates a new line   
-			  Transmission(json.years[0].styles[0].id); // pass style id to Transmission function to get Trans Type
-		    }
+			 		   	Transmission(json.years[0].styles[0].id); // pass style id to Transmission function to get Trans Type
+		    		},complete: function (data) {
+      $('#basicCar').append(' COMPLETED'); 
+     }
               });
     });
 });
