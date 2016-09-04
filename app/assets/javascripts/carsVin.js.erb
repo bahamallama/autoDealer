@@ -192,6 +192,8 @@ $(document).ready(function(){
 						var element = document.querySelector("trix-editor"); // get the trix-editor instance and set to element
 						element.editor.insertHTML("<strong>" + year + " " + makeName + " " + modelName + " " + trim +"</strong>");
 						element.editor.insertLineBreak(); // creates a new line   
+						element.editor.insertHTML("<em>Please verify all options before purchasing</em>");
+						element.editor.insertLineBreak();
 			 		   	Transmission(json.years[0].styles[0].id); // pass style id to Transmission function to get Trans Type
 		    		},complete: function (data) {
       $('#basicCar').append(' COMPLETED'); 
