@@ -51,7 +51,7 @@ class CarsController < ApplicationController
   # GET /cars.json
   def index    
     if @q.blank?
-      @cars = @cars.where(:published => true).paginate(:page => params[:page], :per_page => 8)
+      @cars = @cars.where(:published => true).paginate(:page => params[:page], :per_page => 20)
     else
       @q = Car.ransack(params[:q])
       if @q.result.blank?
