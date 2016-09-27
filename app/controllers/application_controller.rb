@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_search, :set_site
 
   def set_search
-  @q=Car.search(params[:q])
+    @q=Car.search(params[:q])
   end
   
   def set_site
