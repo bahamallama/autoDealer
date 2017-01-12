@@ -34,6 +34,9 @@
 		        <button type="button" class="btn btn-primary" id="calcPayment">Calculate</button>
 		      </div>
 		    </div>
+	  		<% if @site.finance? %>
+	  			<a class="btn btn-primary" href="<%= @site.finance %>">Finance Now!</a>
+	  		<% end %>
 		  </form>
 	  </div>
 	  <br />

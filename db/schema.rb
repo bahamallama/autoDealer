@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812215736) do
+ActiveRecord::Schema.define(version: 20170112205153) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "make_id"
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 20160812215736) do
     t.datetime "updated_at",                                       null: false
     t.string   "theme",      default: "Theme1"
     t.string   "jumbotron",  default: "default.jpg"
+    t.string   "finance"
   end
 
   create_table "users", force: :cascade do |t|
