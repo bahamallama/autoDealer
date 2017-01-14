@@ -1,5 +1,9 @@
 $(document).ready(function () {
 	
+	$('#new_car').one('submit', function() {
+	    $(this).find('input[type="submit"]').attr('disabled','disabled');
+	});
+	
   $('#calcPayment').click(function() {
 	  var p, r, rate, t, total, numOfPayments; // create variables
 	  	r = ($('#interest_rate').val()); // get interest rate from form
