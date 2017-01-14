@@ -11,7 +11,7 @@
 			<div id="alt-caption" class="center-block"></div>
   		  	<div class="cycle-slideshow  center-block" data-cycle-slides="> a" data-cycle-caption="#alt-caption" data-cycle-caption-template="{{alt}}" data-cycle-pause-on-hover="true">
 				<% Car.featured.each do |car|%>
-					<% cache car do %>
+					<% cache Car do %>
 						<%= link_to image_tag(car.image(:large), alt: car.year.to_s + " " + car.make.name + " " + car.model.name, class: "featured-image center-block" ), car, data: {alt: car.year.to_s + " " + car.make.name + " " + car.model.name} %>
 					<% end %>
    				<% end %> 
