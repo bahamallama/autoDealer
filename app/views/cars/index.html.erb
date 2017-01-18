@@ -43,11 +43,19 @@
 		<% end %>
 	<% end %>
 </div>
+
 <div>
 	<% unless @cars.empty? %>
 		<%= will_paginate @cars, class: "digg_pagination"%>
 	<% end %>
 </div>
+
+<% if @site.finance? %>
+	<div class="text-center">
+		<%= link_to image_tag(@site.financeImage), @site.finance, target: "_blank" %>
+	</div>
+<% end %>
+
 <% if can? :create, Car %>
 	<%= link_to "Create A New Listing", new_car_path, class: "btn btn-link" %> 
 <% end %>
