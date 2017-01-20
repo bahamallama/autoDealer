@@ -15,7 +15,9 @@ $(document).ready(function () {
   		p = Math.round(p) // round out decimal
 	  
 	  if (r > 0 && t > 0 && p > 0){ // if statement to check to see if all entries are valid, ie. positive values
-	  
+		if (r >= 1){ // test to see if they are entering the interest rate as a percent, ie. 5% if so divide by 100 to get decimal
+			r = r / 100;
+		};
     	rate = (r / 12); // calculate monthly interest rate
 		numOfPayments = ((t * 12) * -1);// calculate number of payments
    		total =  ((p * rate) /  (1 - (Math.pow((1 + rate), numOfPayments)))); // calculate car payment amout per month
