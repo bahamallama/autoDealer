@@ -12,7 +12,7 @@
   		  	<div class="cycle-slideshow  center-block" data-cycle-slides="> a" data-cycle-caption="#alt-caption" data-cycle-caption-template="{{alt}}" data-cycle-pause-on-hover="true">
 				<% Car.featured.each do |car|%>
 					
-						<%= link_to image_tag(car.image(:large), alt: car.year.to_s + " " + car.make.name + " " + car.model.name, class: "featured-image center-block" ), car, data: {alt: car.year.to_s + " " + car.make.name + " " + car.model.name} %>
+						<%= link_to image_tag(car.image(:large), alt: car.year.to_s + " " + car.make.name + " " + car.model.name, class: "featured-image img-responsive center-block" ), car, data: {alt: car.year.to_s + " " + car.make.name + " " + car.model.name} %>
 					
    				<% end %> 
   		  	</div>
@@ -49,12 +49,6 @@
 		<%= will_paginate @cars, class: "digg_pagination"%>
 	<% end %>
 </div>
-
-<% if @site.financeImage? %>
-	<div class="text-center">
-		<%= link_to image_tag(@site.financeImage), @site.finance, target: "_blank" %>
-	</div>
-<% end %>
 
 <% if can? :create, Car %>
 	<%= link_to "Create A New Listing", new_car_path, class: "btn btn-link" %> 
