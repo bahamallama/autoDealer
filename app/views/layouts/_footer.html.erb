@@ -2,13 +2,13 @@
 <div class="container">
 	<div class="row">
 		<% if @site.financeImage? %>
-			<div class="col-md-6 text-center" style="float:none; display:inline-block; vertical-align:middle; margin-right:-4px;">
-				<%= link_to image_tag(@site.financeImage, class: "img-responsive center-block"), @site.finance, target: "_blank"%>
+			<%= finance_and_warranty %>
+				<%= link_to image_tag(@site.financeImage, alt: "Finance Image", class: "img-responsive center-block"), @site.finance, target: "_blank"%>
 			</div>
 		<% end %>
 		<% if @site.warrantyImage? %>
-			<div class="col-md-6 text-center" style="float:none; display:inline-block; vertical-align:middle; margin-right:-4px;">
-				<%= link_to image_tag(@site.warrantyImage, alt: "Warranty Image", style: "img-responsive center-block"), @site.warrantyURL, target: "_blank" %>
+			<%= finance_and_warranty %>
+				<%= link_to image_tag(@site.warrantyImage, alt: "Warranty Image", class: "img-responsive center-block"), @site.warrantyURL, target: "_blank" %>
 			</div>
 		<% end %>
 	</div>

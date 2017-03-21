@@ -1,51 +1,78 @@
 <h1>Listing Site Details</h1>
 
-<table class="table table-striped table-bordered table-condensed" >
-  <thead>
-    <tr>
-      <th>Name</th>
-	  <th>Tag</th>
-	  <th>Jumbotron</th>
-	  <th>Theme</th>
-      <th>Contact</th>
-      <th>About</th>
-	  <th>Location</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-	  <th>Finance Link</th>
-	  <th>Finance Image</th>
-	  <th>Warranty Link</th>
-	  <th>Warranty Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table class="table table-striped table-bordered table-responsive" >
+	<thead>
+		<td>description</td>
+		<td>Content / Value</td>
+		<td>Edit or Show</td>
+	</thead>	
   <tbody>
-    <% @sites.each do |site| %>
-      <tr>
-        <td><%= site.name %></td>
-		<td><%= site.tag %></td>
-		<td><%= site.jumbotron %></td>
-		<td><%= site.theme %></td>
-        <td><%= site.contact %></td>
-        <td><%= site.about %></td>
-		<td><%= site.location %></td>
-        <td><%= site.address %></td>
-        <td><%= site.city %></td>
-        <td><%= site.state %></td>
-        <td><%= site.zip %></td>
-		<td><%= site.finance %></td>
-		<td><%= site.financeImage %></td>
-		<td><%= site.warrantyURL %></td>
-		<td><%= site.warrantyImage %></td>
-        <td><%= link_to 'Show', site %></td>
-        <td><%= link_to 'Edit', edit_site_path(site) %></td>
-      </tr>
-    <% end %>
+    <tr>
+      <td>Name</td>
+	  <td><%= @site.name %></td>
+      <% @sites.each do |site| %>
+         <td rowspan="15"><%= link_to 'Show', site %> <%= link_to 'Edit', edit_site_path(site) %></td>
+      <% end %>
+  	</tr>
+  	<tr>
+	  <td>Tag</td>
+	  <td><%= @site.tag %></td>
+  	</tr>
+  	<tr>
+	  <td>Jumbotron</td>
+	  <td><%= @site.jumbotron %></td>
+  	</tr>
+  	<tr>
+	  <td>Theme</td>
+	  <td><%= @site.theme %></td>
+  	</tr>
+  	<tr>
+      <td>Contact</td>
+	  <td><%= @site.contact %></td>
+  	</tr>
+  	<tr>
+      <td>About</td>
+	  <td><%= @site.about %></td>
+  	</tr>
+  	<tr>
+	  <td>Location</td>
+	  <td><%= @site.location %></td>
+  	</tr>
+  	<tr>
+      <td>Address</td>
+	  <td><%= @site.address %></td>
+  	</tr>
+  	<tr>
+      <td>City</td>
+	  <td><%= @site.city %></td>
+  	</tr>
+  	<tr>
+      <td>State</td>
+	  <td><%= @site.state %></td>
+  	</tr>
+  	<tr>
+      <td>Zip</td>
+	  <td><%= @site.zip %></td>
+  	</tr>
+  	<tr>
+	  <td>Finance Link</td>
+	  <td><%= @site.finance %></td>
+  	</tr>
+  	<tr>
+	  <td>Finance Image</td>
+	  <td><%= @site.financeImage %></td>
+  	</tr>
+  	<tr>
+	  <td>Warranty Link</td>
+	  <td><%= @site.warrantyURL %></td>
+  	</tr>
+  	<tr>
+	  <td>Warranty Image</td>
+	  <td><%= @site.warrantyImage %></td>
+    </tr>
+
   </tbody>
-</table>
+</table>  
 
 <br>
 
