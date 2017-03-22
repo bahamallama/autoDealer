@@ -57,9 +57,9 @@
 			<tr>
 				<td width="40%">
   		  			<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Price:</strong>
- 		 			<%= number_to_currency(@car.price) %><br />
+ 		 			<%= number_to_currency(@car.price) %>
 				</td>
-				<td width="60%">
+				<td width="40%">
 			 	   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Miles:</strong> 
 				   <%= number_with_delimiter(@car.miles, :delimiter => ',') %>
 			   </td>
@@ -67,7 +67,7 @@
 		   <tr>
 			   <td>
   		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Type:</strong>
-  				   <%= @car.carType %><br />
+  				   <%= @car.carType %>
 			   </td>
 			   <td>
 				   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Transmission:</strong> 
@@ -77,7 +77,7 @@
 		   <tr>
 			   <td>
   		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Drive:</strong>
- 		 		   <%= @car.drive %><br />
+ 		 		   <%= @car.drive %>
 			   </td>
 			   <td>
 				   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Exterior:</strong> 
@@ -87,7 +87,7 @@
 		   <tr>
 			   <td>
   		  		   <span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>Interior:</strong>
-  				   <%= @car.interior %><br />
+  				   <%= @car.interior %>
 			   </td>
 			   <td>
 					<span class="glyphicon glyphicon-star" aria-hidden="true"></span><strong>EPA Mileage:</strong>
