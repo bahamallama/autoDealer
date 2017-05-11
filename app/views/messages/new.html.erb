@@ -1,7 +1,11 @@
 <div class="show-header"><%= @site.name %></div>
 <div class="contactPage-text">You can contact us by phone at <%= @site.contact %> or by visiting one of our locations at:</div>
 <div class="contactPage-text"><%= @site.location %><br /><%= @site.address %><br /><%= @site.city %>, <%= @site.state %> <%= @site.zip %></div>
+<div class="contactPage-text"><% if @site.hours? %><%= @site.hours.html_safe %><% end %></div>
+
 <div class="contactPage-text">Or by filling out the form below:</div>
+
+
 	
 <%= form_for @message, url: contact_path do |message_form| %>
   	<fieldset>

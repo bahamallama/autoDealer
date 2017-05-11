@@ -44,6 +44,13 @@
 		<div class="side-div-header">Share This Vehicle!</div>
   		<%= social_share_button_tag(@car.year.to_s + " " + @car.make.name + " " + @car.model.name, :popup => "true") %>
   	</div>
+	<% if @site.hours? %>
+		<br />
+		<div class="car-details">
+			<div class="side-div-header text-center">Our Hours</div>
+			<%= @site.hours.html_safe %>
+		</div>
+	<% end %>
   	</div>
   	<div class="col-md-5 text-center" >
 	<div class="show-header text-center">

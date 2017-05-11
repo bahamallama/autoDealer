@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320225120) do
+ActiveRecord::Schema.define(version: 20170511012803) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "make_id"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20170320225120) do
     t.string   "financeImage"
     t.string   "warrantyImage"
     t.string   "warrantyURL"
+    t.text     "hours"
   end
 
   create_table "users", force: :cascade do |t|
