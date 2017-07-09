@@ -55,6 +55,7 @@ gem 'ransack'
 gem 'social-share-button'
 # use jquery-ui-rails, rails_sortable, jquery-ui-rails and touchpunch-rails for drag and drop car images
 gem 'jquery-ui-rails'
+gem 'touchpunch-rails'
 gem 'rails_sortable'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
