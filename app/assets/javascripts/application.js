@@ -18,11 +18,11 @@
 //= require blueimp-gallery-all
 //= require bootstrap-sprockets
 //= require jquery.cycle2
-//= require_tree .
 //= require trix
 //= require dropzone
 //= require turbolinks
 // add jquery-ui-/widgets/sortable and rails_sortable to allow drag and drop images
 //= require jquery-ui/widgets/sortable
 //= require rails_sortable
-//= require jquery.ui.touch-punch.min.js
+//= require_tree .
+
