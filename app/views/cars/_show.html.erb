@@ -1,11 +1,25 @@
-<% @images.each do |image| %>
-	<% if image.car_id != nil && image.car_id == @car.id %>
-		<div class="img-thumbnail">
-			<%= link_to image_tag(image.extrapic.url(:thumb)), (image.extrapic.url(:large)) %>
-			<% if can? :destroy, @car %>
-				<br /><%= link_to 'Destroy', image,  method: :delete, data: { confirm: 'Are you sure you want to delete this picture?' }, class: "btn btn-link" %>
-			<% end %>
-		</div>
+<% if can? :destroy, @car %>
+	<table>
+		<tbody class="sortable">  <!-- sortable target -->
+    		<% sortable_fetch(@images.order('sort')) do |image, id_tag| %>  <!-- RailsSortable helper -->
+				<% if image.car_id != nil && image.car_id == @car.id %>
+      				<tr id="<%= id_tag %>">  <!-- you must write it -->
+     		   			<td><%= link_to image_tag(image.extrapic.url(:thumb)), (image.extrapic.url(:large)) %></td>
+        				<td><%= link_to 'Destroy', image,  method: :delete, data: { confirm: 'Are you sure you want to delete this picture?' }, class: "btn btn-link" %></td>
+      	  			</tr>
+	  			<% end %>
+    		<% end %>
+  	  	</tbody>
+	</table>
+<% else %>
+	<% @images.order('sort').each do |image| %>
+		<% if image.car_id != nil && image.car_id == @car.id %>
+			<div class="img-thumbnail">
+				<%= link_to image_tag(image.extrapic.url(:thumb)), (image.extrapic.url(:large)) %>
+				<% if can? :destroy, @car %>
+					<br /><%= link_to 'Destroy', image,  method: :delete, data: { confirm: 'Are you sure you want to delete this picture?' }, class: "btn btn-link" %>
+				<% end %>
+			</div>
+		<% end %>
 	<% end %>
 <% end %>
-  

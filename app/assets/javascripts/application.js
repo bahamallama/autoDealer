@@ -22,4 +22,7 @@
 //= require trix
 //= require dropzone
 //= require turbolinks
+// add jquery-ui-/widgets/sortable and rails_sortable to allow drag and drop images
+//= require jquery-ui/widgets/sortable
+//= require rails_sortable
 

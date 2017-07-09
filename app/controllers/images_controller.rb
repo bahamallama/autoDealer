@@ -56,10 +56,8 @@ class ImagesController < ApplicationController
       respond_to do |format|
           if @image.destroy 
             format.html { redirect_to :back, notice: 'Image was successfully destroyed.' }  
-           
           else
             format.html { render :index }
-           
           end
         end
     end
@@ -76,7 +74,7 @@ class ImagesController < ApplicationController
     end
     
     def image_params
-      params.require(:image).permit(:extrapic, :car_id)
+      params.require(:image).permit(:extrapic, :car_id, :sort)
     end
   
 end

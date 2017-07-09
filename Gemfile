@@ -53,6 +53,9 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'ransack'
 # use social-share-button for social media sharing
 gem 'social-share-button'
+# use jquery-ui-rails and rails_sortable for drag and drop car images
+gem 'jquery-ui-rails'
+gem 'rails_sortable'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development
