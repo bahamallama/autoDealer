@@ -59,9 +59,9 @@ namespace :deploy do
         exit
       end
     end
+    assets.precompile
   end
   
-assets.precompile
 namespace :assets do
   desc "Precompile assets locally and then rsync to app servers"
   task :precompile, :only => { :primary => true } do
