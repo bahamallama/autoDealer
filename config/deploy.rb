@@ -61,18 +61,32 @@ namespace :deploy do
     end
   end
   
-  namespace :assets do
-    desc "Precompile assets locally and then rsync to app servers"
-    task :precompile, :only => { :primary => true } do
-      run_locally "mkdir -p public/__assets; mv public/__assets public/assets;"
-      run_locally "bundle exec rake assets:clean_expired; bundle exec rake assets:precompile;"
-      servers = find_servers :roles => [:app], :except => { :no_release => true }
-      servers.each do |server|
-        run_locally "rsync -av ./public/assets/ #{user}@#{server}:#{current_path}/public/assets/;"
+  
+    namespace :assets do
+
+      Rake::Task['deploy:assets:precompile'].clear_actions
+
+      desc 'Precompile assets locally and upload to servers'
+      task :precompile do
+        on roles(fetch(:assets_roles)) do
+          run_locally do
+            with rails_env: fetch(:rails_env) do
+              execute 'bin/rake assets:precompile'
+            end
+          end
+
+          within release_path do
+            with rails_env: fetch(:rails_env) do
+              upload!('./public/assets/', "#{shared_path}/public/", recursive: true)
+            end
+          end
+
+          run_locally { execute 'rm -rf public/assets' }
+        end
       end
-      run_locally "mv public/assets public/__assets"
+
     end
-  end
+
 
   namespace :figaro do
     desc "SCP transfer figaro configuration to the shared folder"
