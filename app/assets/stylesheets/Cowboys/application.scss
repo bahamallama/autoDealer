@@ -156,7 +156,7 @@ p.jumboText { // sets the site tagline properties under the jumboName on the Jum
 	background-color:  white;
 }
 
-.carAlert { // sale, reduced, sold label on car/index
+.carAlertSold { // sold label on car/index
 	background-color: red;
 	width: 200px; 
 	color: white;
@@ -164,10 +164,42 @@ p.jumboText { // sets the site tagline properties under the jumboName on the Jum
 	text-transform: uppercase;
 }
 
-.carAlertShow { // sale, reduced, sold label on car/show 
+.carAlertReduced { // reduced label on car/index
+	background-color: Green;
+	width: 200px; 
+	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.carAlertPending { // Pending label on car/index
+	background-color: Yellow;
+	width: 200px; 
+	color: Black;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.carAlertShowSold { // sold label on car/show 
 	background-color: red;
 	width: 400px; 
 	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.carAlertShowReduced { // reduced label on car/show 
+	background-color: Green;
+	width: 400px; 
+	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.carAlertShowPending { // pending label on car/show 
+	background-color: Yellow;
+	width: 400px; 
+	color: Black;
 	font-size: 16px;
 	text-transform: uppercase;
 }

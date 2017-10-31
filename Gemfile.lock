@@ -71,6 +71,8 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-ssh-doctor (1.0.0)
+      capistrano (>= 3.1)
     capistrano3-puma (1.2.1)
       capistrano (~> 3.0)
       puma (>= 2.6)
@@ -259,6 +261,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rails-collection
   capistrano-rvm
+  capistrano-ssh-doctor (~> 1.0)
   capistrano3-puma
   coffee-rails (~> 4.1.0)
   cycle2-rails (~> 1.1.0)
@@ -289,5 +292,8 @@ DEPENDENCIES
   web-console (~> 2.0)
   will_paginate (~> 3.0.6)
 
+RUBY VERSION
+   ruby 2.2.1p85
+
 BUNDLED WITH
-   1.10.6
+   1.15.3
