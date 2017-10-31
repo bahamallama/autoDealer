@@ -62,6 +62,17 @@ namespace :deploy do
   end
   
 assets.precompile
+namespace :assets do
+  desc "Precompile assets locally and then rsync to app servers"
+  task :precompile, :only => { :primary => true } do
+    run_locally "bundle exec rake assets:precompile;"
+    servers = find_servers :roles => [:app], :except => { :no_release => true }
+    servers.each do |server|
+      run_locally "rsync -av ./public/assets/ #{user}@#{server}:#{current_path}/public/assets/;"
+    end
+    run_locally "rm -rf public/assets"
+  end
+end
 
   namespace :figaro do
     desc "SCP transfer figaro configuration to the shared folder"
@@ -95,17 +106,6 @@ assets.precompile
   after  :finishing,    :restart
 end
 
-namespace :assets do
-  desc "Precompile assets locally and then rsync to app servers"
-  task :precompile, :only => { :primary => true } do
-    run_locally "bundle exec rake assets:precompile;"
-    servers = find_servers :roles => [:app], :except => { :no_release => true }
-    servers.each do |server|
-      run_locally "rsync -av ./public/assets/ #{user}@#{server}:#{current_path}/public/assets/;"
-    end
-    run_locally "rm -rf public/assets"
-  end
-end
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
