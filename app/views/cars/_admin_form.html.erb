@@ -17,7 +17,7 @@
 	  <th>Published</th>
 	  <th>Featured</th>
 	  <th>Reduced</th>
-	  <th>Sale</th>
+	  <th>Pending</th>
 	  <th>Sold</th>
 	  <th>User</th>
       <th colspan="3">Actions</th>
@@ -35,7 +35,7 @@
 		<td><%= human_boolean(car.published) %></td>
 		<td><%= human_boolean(car.featured) %></td>
 		<td><%= human_boolean(car.reduced) %></td>
-		<td><%= human_boolean(car.sale) %></td>
+		<td><%= human_boolean(car.pending) %></td>
 		<td><%= human_boolean(car.sold) %></td>
 		<td><%= car.user.name %></td>
         <td><%= link_to 'Show', car %> | <%= link_to 'Edit', edit_car_path(car) %> | <%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

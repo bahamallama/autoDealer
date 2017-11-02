@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'listing' => "cars#listing"
       get 'featured' => "cars#featured"
       get 'sold' => "cars#sold"
-      get 'sale' => "cars#sale"
+      get 'pending' => "cars#pending"
       get 'reduced' => "cars#reduced"
   end
   
