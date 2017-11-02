@@ -1,7 +1,6 @@
- <script src="jquery.ui.touch-punch.min.js"></script>
 <div class="row">
   	<div class="col-md-3">
-	  <div class="car-payment text-center"> <script src="jquery.ui.touch-punch.min.js"></script>
+	  <div class="car-payment text-center">
 		  <div class="side-div-header">Calculate Payment</div>
 		  <form class="form-horizontal">
 		    <div class="form-group">
@@ -116,9 +115,9 @@
 	</div>
 	<div class="Car-Image">
  		<%= image_tag @car.image(:large), class: "img-rounded center-block img-responsive" %>
-		<% if @car.sold %><div class="text-center center-block carAlertShow img-responsive">Sold</div><% end %>
-		<% if @car.sale %><div class="text-center center-block carAlertShow img-responsive">Sale</div><% end %>
-		<% if @car.reduced %><div class="text-center center-block carAlertShow img-responsive">Reduced</div><% end %>
+		<% if @car.sold %><div class="text-center center-block carAlertShowSold img-responsive">Sold</div><% end %>
+		<% if @car.pending %><div class="text-center center-block carAlertShowPending img-responsive">Pending Sale</div><% end %>
+		<% if @car.reduced %><div class="text-center center-block carAlertShowReduced img-responsive">Reduced Price</div><% end %>
 	</div>
 	<div class="text-center">
 		<% if can? :update, @car %>
