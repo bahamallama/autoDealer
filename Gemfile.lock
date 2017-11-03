@@ -254,11 +254,11 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
   byebug
   cancancan (~> 1.10)
-  capistrano
+  capistrano (~> 3.1)
   capistrano-bundler
   capistrano-faster-assets (~> 1.0)
   capistrano-figaro-yml (~> 1.0.2)
-  capistrano-rails
+  capistrano-rails (~> 1.1)
   capistrano-rails-collection
   capistrano-rvm
   capistrano-ssh-doctor (~> 1.0)
