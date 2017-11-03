@@ -11,7 +11,7 @@
       <td>Name</td>
 	  <td><%= @site.name %></td>
       <% @sites.each do |site| %>
-         <td rowspan="15"><%= link_to 'Show', site %> <%= link_to 'Edit', edit_site_path(site) %></td>
+         <td rowspan="17"><%= link_to 'Show', site %> <%= link_to 'Edit', edit_site_path(site) %></td>
       <% end %>
   	</tr>
   	<tr>
@@ -61,6 +61,10 @@
   	<tr>
 	  <td>Finance Link</td>
 	  <td><%= @site.finance %></td>
+  	</tr>
+  	<tr>
+	  <td>Finance Content</td>
+	  <td><%= @site.financeContent %></td>
   	</tr>
   	<tr>
 	  <td>Finance Image</td>

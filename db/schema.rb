@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031022542) do
+ActiveRecord::Schema.define(version: 20171103212044) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "make_id"
@@ -73,24 +73,25 @@ ActiveRecord::Schema.define(version: 20171031022542) do
   end
 
   create_table "sites", force: :cascade do |t|
-    t.string   "name",          default: "site name"
-    t.string   "tag",           default: "tagline on homepage"
-    t.string   "contact",       default: "contact information"
-    t.text     "about",         default: "about us page information"
-    t.string   "location",      default: "location name"
-    t.string   "address",       default: "street address"
-    t.string   "city",          default: "city"
-    t.string   "state",         default: "state"
-    t.string   "zip",           default: "zip code"
-    t.datetime "created_at",                                          null: false
-    t.datetime "updated_at",                                          null: false
-    t.string   "theme",         default: "Theme1"
-    t.string   "jumbotron",     default: "default.jpg"
+    t.string   "name",           default: "site name"
+    t.string   "tag",            default: "tagline on homepage"
+    t.string   "contact",        default: "contact information"
+    t.text     "about",          default: "about us page information"
+    t.string   "location",       default: "location name"
+    t.string   "address",        default: "street address"
+    t.string   "city",           default: "city"
+    t.string   "state",          default: "state"
+    t.string   "zip",            default: "zip code"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+    t.string   "theme",          default: "Theme1"
+    t.string   "jumbotron",      default: "default.jpg"
     t.string   "finance"
     t.string   "financeImage"
     t.string   "warrantyImage"
     t.string   "warrantyURL"
     t.text     "hours"
+    t.string   "financeContent"
   end
 
   create_table "users", force: :cascade do |t|

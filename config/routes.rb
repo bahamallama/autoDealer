@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   #get 'listing' => "cars#listing"
 
   get 'pages/about'
-
+  get 'pages/finance'
  # get 'pages/contact'
   
   root 'cars#index'
