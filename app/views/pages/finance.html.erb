@@ -1,2 +1,2 @@
 <div class="show-header"><%= @site.name %></div>
-<div class="contactPage-text"><%= @site.financeContent.html_safe %></div>
+<div class="contactPage-text"><% if @site.financeContent? %><%= @site.financeContent.html_safe %></div>
