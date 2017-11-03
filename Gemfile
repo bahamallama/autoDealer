@@ -55,31 +55,25 @@ gem 'ransack'
 gem 'social-share-button'
 # use jquery-ui-rails, rails_sortable, jquery-ui-rails and touchpunch-rails for drag and drop car images
 gem 'jquery-ui-rails'
-gem 'rails_sortable'
 gem 'touchpunch-rails'
+gem 'rails_sortable'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'rvm1-capistrano3', require: false used to stabilize ruby and gems between produciton and development
 #gem 'rvm1-capistrano3', require: false
 #gem 'capistrano-bundler', '~> 1.1.2'
 # Deploy with Capistrano
-# gem 'capistrano'
-# gem 'capistrano-rails'
-
-gem 'capistrano', '~> 3.1'
-gem 'capistrano-rails', '~> 1.1'
-gem 'capistrano-faster-assets', '~> 1.0'
-
+gem 'capistrano'
+gem 'capistrano-rails'
 gem 'capistrano-rvm'
 gem 'capistrano3-puma'
 gem 'capistrano-figaro-yml', '~> 1.0.2'
 gem 'capistrano-rails-collection'
+gem 'capistrano-faster-assets', '~> 1.0'
 gem 'therubyracer'
-gem 'rails_12factor'
-gem 'pg'
 group :production do
-#  gem 'pg'
-#  gem 'rails_12factor'
+  gem 'pg'
+  gem 'rails_12factor'
 #  gem 'capistrano',         require: false
 #  gem 'capistrano-rvm',     require: false
 #  gem 'capistrano-rails',   require: false
@@ -94,12 +88,12 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
- # gem 'pg'
+  gem 'pg'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'capistrano-ssh-doctor', '~> 1.0'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
   gem 'sqlite3'
 end
-
