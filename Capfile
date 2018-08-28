@@ -5,7 +5,7 @@ require 'capistrano/deploy'
 
 require 'capistrano/rails/migrations'
 require 'capistrano/bundler'
-require 'capistrano/rvm'
+require 'capistrano/rbenv'
 require 'capistrano/puma'
 
 require 'capistrano/figaro_yml'

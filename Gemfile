@@ -65,7 +65,7 @@ gem 'rails_sortable'
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'capistrano-rails'
-gem 'capistrano-rvm'
+gem 'capistrano-rbenv'
 gem 'capistrano3-puma'
 gem 'capistrano-figaro-yml', '~> 1.0.2'
 gem 'capistrano-rails-collection'
