@@ -4,4 +4,10 @@ class PagesController < ApplicationController
 
   def contact
   end
+  
+  def finance
+  end
+  
+  def warranty
+  end
 end

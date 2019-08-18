@@ -17,7 +17,12 @@
 			<li><%= link_to "Inventory", cars_path %></li>
 			<li><%= link_to "About Us", pages_about_path %></li>
 			<li><%= link_to "Contact Us", contact_path %></li>
-			<li><%= link_to "Financing", pages_finance_path %></li>
+			<% if @site.financeContent? %>
+				<li><%= link_to "Financing", pages_finance_path %></li>
+			<% end %>
+			<% if @site.warrantyContent? %>
+				<li><%= link_to "Warranty", pages_warranty_path %></li>
+			<% end %>
       	</ul>
 	  	
 		<!-- Search function -->

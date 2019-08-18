@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   get 'pages/about'
   get 'pages/finance'
+  get 'pages/warranty'
  # get 'pages/contact'
   
   root 'cars#index'
