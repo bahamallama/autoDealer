@@ -198,5 +198,12 @@ document.getElementById('links img-responsive').onclick = function (event) {
 			    	</fieldset>
 			  <% end %>
 		</div>
+		<% if @site.warrantyContent? %>
+			<div class="car-contact">
+			  	<div class="side-div-header text-center">Warranty</div>
+			  		<div>If you purchase this vehicle at the <strong>listed price</strong>, we will include, <strong>free of charge</strong>, a 4 month/4k mile powertrain warranty that includes maintenance benefits! For more information <%= link_to "click here!", pages_warranty_path %></div>
+		  		</div>
+			</div>
+		<% end %>
 	</div>
 </div>
